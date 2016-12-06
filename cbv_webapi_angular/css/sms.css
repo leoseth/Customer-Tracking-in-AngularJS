@@ -1,0 +1,172 @@
+﻿
+.Panel1class{ 
+      z-index: inherit;
+      position: absolute;
+      left: 10px;
+      top: 61px;
+      width: 728px;
+      height: 315px;
+      background-color:white;
+}
+.Label2class{
+      z-index: inherit;
+      position: absolute;
+      left: 22px;
+      top: 24px;
+      width: 545px;
+      display:inherit;
+}
+.Panel2class{
+      z-index: inherit;
+      position: absolute;
+      left: 14px;
+      top: 283px;
+      width: 547px;
+      height: 23px;
+}
+.btnaddclass{
+      margin-right: 39px;
+      z-index: inherit;
+      position: absolute;
+      left: -1px;
+      top: 1px;
+      height: 23px;
+      width:110px;
+}
+.btneditclass{
+      z-index: inherit;
+      position: absolute;
+      left: 108px;
+      top: 1px;
+      width: 101px;
+      height: 23px;
+      width:110px;
+}
+.btndeleteclass{
+      z-index: inherit;
+      position: absolute;
+      left: 217px;
+      top: 1px;
+      height: 23px;
+      width:110px;
+}
+.btnquitclass{
+      z-index: inherit;
+      position: absolute;
+      left: 435px;
+      top: 1px;
+      height: 23px;
+      width:110px;
+}
+.btnviewclass{
+      z-index: inherit;
+      position: absolute;
+      left: 326px;
+      top: 1px;
+      height: 23px;
+      width:110px;
+}
+.lblsmsclass{
+      z-index: inherit;
+      position: absolute;
+      left: 21px;
+      top: 109px;
+      width: 135px;
+      height: 18px;
+}
+.txtsmsclass{
+      z-index: inherit;
+      position: absolute;
+      left: 140px;
+      top: 113px;
+      width: 423px;
+      height: 110px;
+}
+.cmbserviceclass{
+      z-index: inherit;
+      position: absolute;
+      left: 140px;
+      top: 79px;
+      width: 300px;
+      display:inherit;
+}
+        
+.lblErrorclass{
+      z-index: inherit;
+      position: absolute;
+      left: 580px;
+      top: 195px;
+      width: 126px;
+      right: 22px;
+      display:inherit;
+}
+        
+.divsmsclass{
+      width: 734px;
+      height: 13px;
+}
+        
+.Listeditclass{
+      z-index: inherit;
+      position: absolute;
+      left: 56px;
+      top: 25px;
+      width: 584px;
+      height: 180px;
+      display:inherit;
+}       
+
+#TextArea1{
+      margin-top: 259px;
+}
+.ListBoxviewclass {
+      z-index: inherit;
+      position: absolute;
+      top: 25px;
+      left: 2px;
+      width: 1262px;
+      height: 180px;
+      display:inherit;
+}
+.lbleditclass {
+      z-index: inherit;
+      position: absolute;
+      top: 64px;
+      left: 69px;
+      height: 24px;
+      width: 583px;
+      right: 653px;
+      display:inherit;
+}
+.lblserviceclass {
+      z-index: inherit;
+      position: absolute;
+      left: 22px;
+      top: 79px;
+      width: 104px;
+      display:inherit;
+}
+.Textlogclass {
+      z-index: inherit;
+      position: absolute;
+      top: 319px;
+      left: 35px;
+      width: 383px;
+}
+.txtuserid2class {
+      z-index: inherit;
+      position: absolute;
+      top: 251px;
+      left: 413px;
+      width: 303px;
+      display:inherit;
+}
+.lbltopuseridclass {
+      z-index: inherit;
+      position: absolute;
+      left: 76px;
+      top: 68px;
+      width: 63px;
+      right: 1168px;
+      display:inherit;
+}

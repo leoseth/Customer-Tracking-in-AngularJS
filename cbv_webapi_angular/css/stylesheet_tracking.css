@@ -1,0 +1,1191 @@
+﻿body 
+{
+    background-color:floralwhite;
+}
+.panel1class{ 
+    z-index: inherit;
+    position: absolute;
+    left: 1px;
+    top: 3px;
+    width: 1340px;
+    height: 776px;
+    background-color:white;
+    margin-right: 0px;
+}
+.Panel2class{
+    z-index: inherit;
+    position: absolute;
+    left: 23px;
+    top: 217px;
+    width: 548px;
+    height: 19px;
+}
+.btnaddclass{
+    margin-right: 39px;
+    z-index: inherit;
+    position: absolute;
+    left: -2px;
+    top: 1px;
+    height: 19px;
+    width:110px;
+}
+.btneditclass{
+    z-index: inherit;
+    position: absolute;
+    left: 107px;
+    top: 1px;
+    width: 101px;
+    height: 19px;
+    width:110px;
+}
+.btndeleteclass{
+    z-index: inherit;
+    position: absolute;
+    left: 216px;
+    top: 1px;
+    height: 19px;
+    width:110px;
+}
+.btnviewclass{
+    z-index: inherit;
+    position: absolute;
+    left: 325px;
+    top: 1px;
+    height: 19px;
+    width:110px;
+}
+.lblcustidclass{
+    z-index: inherit;
+    position: absolute;
+    left: 10px;
+    top: 76px;
+    width: 107px;
+    height:15px;          
+}
+.lblidnumberclass{
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 183px;
+    width: 76px;
+    height: 18px;
+}
+.lblfirstnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 10px;
+    top: 183px;
+    width: 110px;
+}
+.lbllastnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 10px;
+    top: 158px;
+    width: 106px;
+    height: 17px;
+}
+.lbltelnoclass{
+    z-index: inherit;
+    position: absolute;
+    left: 452px;
+    top: 115px;
+    width: 98px;
+}   
+.txttelnoclass{
+    z-index: inherit;
+    position: absolute;
+    left: 580px;
+    top: 112px;
+    width: 162px;
+    height: 20px;
+}
+.txtlastnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 159px;
+    top: 159px;
+    width: 248px;
+    margin-bottom: 0px;
+}
+.txtfirstnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 159px;
+    top: 185px;
+    width: 250px;
+}
+                
+.lbltelclass{
+    z-index: inherit;
+    position: absolute;
+    left: 580px;
+    top: 141px;
+    height: 15px;
+    display:inherit;
+}
+        
+.div_top_class{
+    width: 869px;
+    height: 13px;
+    margin-bottom: 290px;
+}
+        
+.Listeditclass{
+    z-index: inherit;
+    position: absolute;
+    left: 133px;
+    top: 30px;
+    width: 927px;
+    height: 180px;
+    right: 280px;
+    display:inherit;
+}          
+
+#TextArea1{
+    margin-top: 259px;
+}
+.ListBoxviewclass {
+    z-index: inherit;
+    position: absolute;
+    top: 30px;
+    left: 127px;
+    width: 1179px;
+    height: 180px;
+    bottom: 566px;
+    display:inherit;
+}
+.txtcustid2class {
+    z-index: inherit;
+    position: absolute;
+    top: 4px;
+    left: 885px;
+    width: 116px;
+    right: 331px;
+}
+.Textlog2class {
+    z-index: inherit;
+    position: absolute;
+    top: 250px;
+    left: 759px;
+    width: 408px;
+    display:inherit;
+}
+.lbleditclass {
+    z-index: inherit;
+    position: absolute;
+    top: 3px;
+    left: 121px;
+    height: 24px;
+    width: 621px;
+    right: 596px;
+    display:inherit;
+}
+
+.lblnameclass {
+    z-index: inherit;
+    position: absolute;
+    left: 301px;
+    top: 11px;
+    width: 124px;
+    display:inherit;
+}
+.txtsearchclass {
+    z-index: inherit;
+    position: absolute;
+    top: 5px;
+    width: 206px;
+    left: 848px;
+    height: 22px;
+    display:inherit;
+}
+
+.lblrfidclass {
+    z-index: inherit;
+    position: absolute;
+    left: 10px;
+    top: 47px;
+    height: 12px;
+    width: 63px;
+    margin-bottom: 0px;
+}
+.txtrfidclass {
+    z-index: inherit;
+    position: absolute;
+    left: 159px;
+    top: 48px;
+    width: 172px;
+}
+.lblcustomtypeclass {
+    z-index: inherit;
+    position: absolute;
+    top: 101px;
+    right: 1224px;
+    width: 108px;
+}
+.lblmiddlenameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 451px;
+    top: 45px;
+    width: 100px;
+    height: 19px;
+}
+.txtmiddlenameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 580px;
+    top:  39px;
+    width: 171px;
+    height: 18px;
+}
+.lbladdressclass{
+    z-index: inherit;
+    position: absolute;
+    left: 453px;
+    top: 76px;
+    width: 79px;
+}
+.lblmobilenumclass{
+    z-index: inherit;
+    position: absolute;
+    left: 453px;
+    top: 158px;
+}
+.txtmobilenumclass{
+    z-index: inherit;
+    position: absolute;
+    left: 581px;
+    top: 156px;
+    width: 160px;
+}
+.lblemailaddclass{
+    z-index: inherit;
+    position: absolute;
+    left: 454px;
+    top: 188px;
+}
+.txtemailaddclass {
+    z-index: inherit;
+    position: absolute;
+    left: 582px;
+    top: 184px;
+    width: 159px;
+}
+.lblcompnameclass {
+    z-index: inherit;
+    position: absolute;
+    left: 9px;
+    top: 134px;
+    height: 15px;
+    width: 102px;
+    right: 1229px;           
+}
+.txtcompnameclass {
+    z-index: inherit;
+    position: absolute;
+    left: 159px;
+    top: 126px;
+    width: 249px;
+    right: 924px;
+    height: 21px;
+}
+.customertypeclass {
+    z-index: inherit;
+    position: absolute;
+    left: 755px;
+    top: 5px;
+    width: 97px;
+    height: 24px;
+    display:inherit;
+}
+.lblbirthdayclass{
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 44px;
+}
+.txtbirthday2class {
+    z-index: inherit;
+    position: absolute;
+    left: 995px;
+    top: 42px;
+    width: 172px;
+}
+.customtypeclass {
+    z-index: inherit;
+    position: absolute;
+    left: 159px;
+    top: 101px;
+    width: 175px;
+}
+.lblbirthplaceclass {
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 80px;
+    width: 73px;
+}
+.txtbirthplaceclass {
+    z-index: inherit;
+    position: absolute;
+    left: 995px;
+    top: 78px;
+    width: 172px;
+}
+.lblnationalityclass{
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 113px;
+}          
+.lblidtypeclass {
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 146px;
+}
+.sidtypeclass{
+    z-index: inherit;
+    position: absolute;
+    left: 995px;
+    top: 144px;
+    width: 182px;
+}
+.lblline1class {
+    z-index: inherit;
+    position: absolute;
+    left: 0px;
+    top: 240px;
+    width: 1341px;
+    height: 6px;
+}
+.txtaddressclass {
+    z-index: inherit;
+    position: absolute;
+    left: 580px;
+    top: 68px;
+    height: 35px;
+    width: 252px;
+}
+.lblfirstclass {
+    z-index: inherit;
+    position: absolute;
+    left: 477px;
+    top: 12px;
+    width: 79px;
+    display:inherit;
+}           
+.lblcustid {
+    z-index: inherit;
+    position: absolute;
+    left: 150px;
+    top: 12px;
+    display:inherit;
+}
+.sdtclass {
+    z-index: inherit;
+    position: absolute;
+    left: 724px;
+    top: 301px;
+    width: 135px;
+}
+.lblcompclass {
+    z-index: inherit;
+    position: absolute;
+    left: 564px;
+    top: 5px;
+    width: 135px;
+    display:inherit;
+}
+.lblplatenumberclass {
+    z-index: inherit;
+    position: absolute;
+    left: 14px;
+    top: 282px;
+    bottom: 278px;
+}
+.txtplatenumberclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 282px;
+    width: 174px;
+    right: 969px;
+}
+.lblmakeclass {
+    z-index:inherit;
+    position: absolute;
+    left: 15px;
+    top: 308px;
+    bottom: 234px;
+}
+.txtmakeclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 308px;
+    width: 252px;
+    height: 12px;
+}
+.txtregisnumclass{
+    z-index: inherit;
+    position: absolute;
+    left: 589px;
+    top: 279px;
+    width: 166px;
+}
+.lblregistrationnumclass {
+    z-index: inherit;
+    position: absolute;
+    left: 452px;
+    top: 280px;
+    width: 104px;
+}
+.txtmodelclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 332px;
+    height: 16px;
+    width: 252px;
+}
+.lblmodelclass{
+    z-index: inherit;
+    position: absolute;
+    left: 15px;
+    top: 333px;
+}
+.lblcarlibraryclass {
+    z-index: inherit;
+    position: absolute;
+    left: 11px;
+    top: 257px;
+    width: 113px;
+}
+.txtchasisnumclass{
+    z-index: inherit;
+    position:absolute;
+    left: 997px;
+    top: 277px;
+    width: 175px;
+}
+.txtenginenumclass{
+    z-index:inherit;
+    position:absolute;
+    left: 997px;
+    top: 310px;
+    width: 175px;
+}
+.lblcolorclass{
+    z-index: inherit;
+    position: absolute;
+    left: 451px;
+    top: 334px;
+    height: 18px;
+}
+.lblenginenumclass {
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 308px;
+    width: 105px;
+    bottom: 225px;
+    right: 321px;
+}
+.llbregdateclass {
+    z-index: inherit;
+    position: absolute;
+    left: 452px;
+    top: 306px;
+}
+.txtcolorclass {
+    z-index: inherit;
+    position: absolute;
+    left: 588px;
+    top: 334px;
+    width: 167px;
+}
+.lblchasisnumclass {
+    z-index: inherit;
+    position: absolute;
+    left: 886px;
+    top: 280px;
+    bottom: 253px;
+}
+.lblline2class {
+    z-index: inherit;
+    position: absolute;
+    left: 2px;
+    top: 382px;
+    width: 1341px;
+    height: 6px;
+}
+.lblcarreferncesclass {
+    z-index: inherit;
+    position: absolute;
+    left: 580px;
+    top: 218px;
+    width: 212px;
+    display:inherit;
+}
+.paneloptionbtnclass{
+    position: absolute;
+    left: 25px;
+    top: 359px;
+    width: 553px;
+    height: 19px;
+}
+.caraddclass {
+    z-index: inherit;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 111px;
+    height: 19px;
+}
+.careditclass{
+    z-index: inherit;
+    position: absolute;
+    left: 111px;
+    top: 1px;
+    width: 109px;
+    height: 19px;
+}           
+.cardeleteclass {
+    z-index: inherit;
+    position: absolute;
+    left: 219px;
+    top: 1px;
+    width: 111px;
+    height: 19px;
+}
+.txtrgdateclass {
+    z-index: inherit;
+    position: absolute;
+    left: 589px;
+    top: 306px;
+    width: 166px;
+}           
+.lblplatenumvalclass {
+    z-index: inherit;
+    position: absolute;
+    left: 344px;
+    top: 293px;
+}
+.lblregisnumvalclass {
+    z-index: inherit;
+    position: absolute;
+    left: 763px;
+    top: 290px;
+    display:inherit;
+}           
+.lbltransactionlibclass {
+    z-index: inherit;
+    position: absolute;
+    left: 8px;
+    top: 392px;
+    height: 23px;
+    display:inherit;
+    right: 988px;
+}
+.lbltransacnumclass {
+    z-index: inherit;
+    position: absolute;
+    left: 13px;
+    top: 443px;
+    width: 135px;
+    display:inherit;           
+}           
+.cmbtypeofserveclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 515px;
+    height:20px;
+    width: 232px;
+    display:inherit;
+}
+.txtinvoicenumclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 415px;
+    width: 178px;
+    height: 21px;
+    bottom: 172px;
+    display:inherit;
+}
+.cmbwarstatclass {
+    z-index: inherit;
+    position: absolute;
+    left: 161px;
+    top: 540px;
+    height:20px;
+    width: 232px;
+    display:inherit;
+}
+.lblwarexpireclass {
+     z-index: inherit;
+     position: absolute;
+     left: 13px;
+     top: 566px;
+     height: 19px;
+     width: 134px;
+     display:inherit;
+}
+.txttransacnumclass{
+     z-index: inherit;
+     position: absolute;
+     left: 161px;
+     top: 444px;
+     height: 15px;
+     width: 178px;
+     display:inherit;
+}
+.cmbserviceclass {
+     z-index: inherit;
+     position: absolute;
+     left: 161px;
+     top: 490px;
+     height: 20px;
+     width: 232px;
+     right: 939px;
+     display:inherit;
+}
+.txtwarexpireclass {
+     z-index: inherit;
+     position: absolute;
+     left: 161px;
+     top: 566px;
+     height:15px;
+     width: 178px;
+     display:inherit;
+}
+.lblwarstatclass {
+     z-index: inherit;
+     position: absolute;
+     left: 13px;
+     top: 542px;
+     width: 102px;
+     height: 20px;
+     bottom: 111px;
+     right: 1190px;
+     display:inherit;
+}
+ .lblinvoicenumclass {
+     z-index: inherit;
+     position: absolute;
+     left: 15px;
+     top: 417px;
+     width: 105px;
+     display:inherit;
+}
+.lbltypeofservclass {
+     z-index: inherit;
+     position: absolute;
+     left: 14px;
+     top: 517px;
+     bottom: 155px;
+     display:inherit;
+}
+.lblserviceclass {
+     z-index: inherit;
+     position: absolute;
+     left: 14px;
+     top: 491px;
+     display:inherit;
+}
+.lblservdeclass {
+     z-index: inherit;
+     position: absolute;
+     left: 447px;
+     top: 530px;
+     right: 733px;
+     display:inherit;
+}           
+.txtmaindueclass {
+     z-index: inherit;
+     position: absolute;
+     left: 591px;
+     top: 442px;
+     height:15px;
+     width: 174px;
+     right: 566px;
+     display:inherit;
+}
+.lblmaindueclass {
+     z-index: inherit;
+     position: absolute;
+     left: 447px;
+     top: 441px;
+     display:inherit;
+}
+.lblline3class {
+     z-index: inherit;
+     position: absolute;
+     left: 3px;
+     top: 625px;
+     width: 1339px;
+     height: 5px;
+}
+.transeditclass {
+     z-index: inherit;
+     position: absolute;
+     left: 111px;
+     top:  1px;
+     height: 20px;
+     width: 110px;
+     display:inherit;
+}           
+.transdeleteclass {
+     z-index: inherit;
+     position: absolute;
+     left: 220px;
+     top: 1px;
+     width:116px;
+     height:20px;
+     right: 211px;
+     display:inherit;
+}           
+.lbltrandateclass {
+     z-index: inherit;
+     position: absolute;
+     left: 13px;
+     top: 467px;
+     display:inherit;
+}
+.txttrandateclass {
+     z-index: inherit;
+     position: absolute;
+     left: 161px;
+     top: 467px;
+     height:15px;
+     width:178px;
+     display:inherit;
+}
+.lblcarinfoclass {
+     z-index: inherit;
+     position: absolute;
+     left: 10px;
+     top: 12px;
+     display:inherit;
+}
+.labelmakeclass{
+     z-index: inherit;
+     position: absolute;
+     left: 270px;
+     top: 12px;
+     display:inherit;
+     right: 998px;
+}           
+   
+.lblplatesearchclass{
+     z-index: inherit;
+     position: absolute;
+     left: 767px;
+     top: 15px;
+     display:inherit;
+}
+.labelmodelclass{
+     z-index: inherit;
+     position: absolute;
+     left: 481px;
+     top: 12px;
+     right: 788px;
+}
+.txtsearchplatenumclass{
+     z-index: inherit;
+     position: absolute;
+     top: 8px;
+     width: 214px;
+     right: 261px;
+     left: 854px;
+     height: 20px;
+     display:inherit;
+}
+.txtserchviewplatenumclass{
+     z-index: inherit;
+     position: absolute;
+     left: 1091px;
+     top: 8px;
+     width: 214px;
+     display:inherit;
+     height:20px;
+}
+.lblsearchviewplatenumclass{
+     z-index: inherit;
+     position: absolute;
+     left: 1017px;
+     top: 13px;
+     display:inherit;
+}           
+.labelregnumclass {
+     z-index: inherit;
+     position: absolute;
+     left: 564px;
+     top: 12px;
+     display:inherit;
+}
+.labelcolorclass {
+     z-index: inherit;
+     position: absolute;
+     left: 686px;
+     top: 11px;
+     display:inherit;
+}
+.lblsmsmessclass {
+     z-index: inherit;
+     position: absolute;
+     left: 447px;
+     top: 464px;
+     display:inherit;
+}
+.mainscheddropdownclass {
+     z-index: inherit;
+     position: absolute;
+     left: 591px;
+     top: 414px;
+     width: 177px;
+     right: 571px;
+     height:27px;
+     display:inherit;
+}
+.txtrgdate2class {
+     z-index: inherit;
+     position: absolute;
+     left: 589px;
+     top: 307px;
+     width:166px;
+     height:15px;
+}
+.carrefdropdownlistclass {
+     z-index: inherit;
+     position: absolute;
+     left: 794px;
+     top: 216px;
+     right: 396px;
+     width:150px;
+}           
+.labelranslistclass {
+     z-index: inherit;
+     position: absolute;
+     left: -366px;
+     top: 300px;
+     width: 1325px;
+     display:inherit;
+}           
+.labelinvoicenumclass {
+     z-index: inherit;
+     position: absolute;
+     top: 393px;
+     height: 19px;
+     left: 277px;
+     display:inherit;
+}           
+.labeltransactnumclass {
+     z-index: inherit;
+     position: absolute;
+     left: 123px;
+     top: 393px;
+     width: 125px;
+     display:inherit;
+}
+.labeltransactdateclass{
+     z-index: inherit;
+     position: absolute;
+     left: 10px;
+     top: 391px;
+     display:inherit;
+}           
+.labelwarstatusclass{
+     z-index: inherit;
+     position: absolute;
+     top: 393px;
+     left: 897px;
+     height: 17px;
+     display:inherit;
+}            
+.labelsearchtransactnum2class {
+     z-index: inherit;
+     position: absolute;
+     left: 1270px;
+     top: 401px;
+     display:inherit;
+}
+.txtsmsmessclass {
+     z-index: inherit;
+     position: absolute;
+     left: 591px;
+     top: 469px;
+     width: 429px;
+     height: 54px;
+     display:inherit;
+}            
+.txtidnumberclass{
+     z-index: inherit;
+     position: absolute;
+     left: 995px;
+     top: 179px;
+     width: 175px;
+     height: 22px;
+}
+.lblErrorclass{
+     z-index: inherit;
+     position: absolute;
+     left: 1180px;
+     top: 5px;
+     width: 129px;
+     right: 31px;
+}            
+.checkbox_closeclass{
+     z-index: inherit;
+     position: absolute;
+     left: 902px;
+     top: 598px;
+     height:20px;
+     width: 120px;
+}
+.checksmsclass{
+     z-index: inherit;
+     position: absolute;
+     left: 745px;
+     top: 599px;
+     width:120px;
+}
+.labelplatenumclass{
+     z-index: inherit;
+     position: absolute;
+     left: 139px;
+     top: 9px;
+     display: inherit;
+     right: 1010px;
+     height: 20px;
+}
+.Panel4class{
+     z-index: inherit;
+     position: absolute;
+     left: 28px;
+     top: 599px;
+     width: 992px;
+     height: 20px;
+     right: 298px;
+}
+.checkaccessclass{
+     z-index: inherit;
+     position: absolute;
+     left: 589px;
+     top: 599px;
+     bottom: 42px;
+     width: 120px;
+}            
+.txtservdeclass{
+     z-index: inherit;
+     position: absolute;
+     left: 591px;
+     top: 532px;
+     height: 57px;
+     width: 429px;
+     display: inherit;
+}    
+.transaddclass{
+     z-index: inherit;
+     position: absolute;
+     left: 1px;
+     top: 2px;
+     height: 20px;
+     width: 110px;
+     bottom: -2px;
+     right: 881px;
+     display: inherit;
+}
+.transactionlistboxclass{
+     z-index: inherit;
+     position: absolute;
+     left: 4px;
+     top: 414px;
+     height: 211px;
+     width: 1332px;
+     display: inherit;
+}
+.labelserviceclass{
+     z-index: inherit;
+     position: absolute;
+     left: 430px;
+     top: 393px;
+     display: inherit;
+}            
+.carviewclass{
+     z-index: inherit;
+     position: absolute;
+     left: 329px;
+     top: 1px;
+     width: 113px;
+     height: 19px;
+}
+.btnsearchclass{
+     z-index: inherit;
+     position: absolute;
+     left: 434px;
+     top: 1px;
+     width:113px;
+}
+.txtnationalityclass{
+     z-index: inherit;
+     position: absolute;
+     left: 995px;
+     top: 111px;
+     width: 173px;
+     display: inherit;
+}
+.Label2class{
+     z-index: inherit;
+     position: absolute;
+     left: 5px;
+     top: 9px;
+     width: 131px;             
+     display: inherit;
+}
+.resultlistclass{
+     z-index: inherit;
+     position: absolute;
+     left: 200px;
+     top: 37px;
+     width: 1000px;
+     height: 148px;
+     display:inherit;
+     background-color:lightsteelblue;
+     text-wrap:normal;
+     font-size:x-small;
+     font-family:Tahoma;
+     text-decoration-color:white;              
+}
+.txtcustidclass{
+     z-index: inherit;
+     position: absolute;
+     left: 159px;
+     top: 76px;
+     width: 172px;
+}            
+.labelsearchtransactnum1class{
+     z-index: inherit;
+     position: absolute;
+     left: 1272px;
+     top: 390px;
+     display: inherit;
+     width: 44px;
+}            
+.labelmainduedateclass{
+     z-index: inherit;
+     position: absolute;
+     top: 393px;
+     height: 16px;
+     width: 133px;
+     left: 1141px;
+     display: inherit;
+}
+.lblcustrequiredclass{
+     z-index: inherit;
+     position: absolute;
+     left: 160px;
+     top: 25px;
+     width: 300px;  
+     display:inherit;          
+}
+.txtrfid2class{
+      z-index: inherit;
+      position: absolute;
+      left: 80px;
+      top: 20px;
+      height: 0px;
+      width:2px;                      
+}
+.labelchasisnumclass{
+      z-index: inherit;
+      position: absolute;
+      top: 12px;
+      display: inherit;
+      right: 449px;
+}
+/*.confirmdivclass{
+      z-index: inherit;
+      position:fixed;
+      left: 1006px;
+      top: 230px;           
+      width:500px;
+      display:inherit;
+}*/            
+.divcarclass{
+      z-index: inherit;
+      position: absolute;
+      left: 994px;
+      top:  350px;
+      width:500px;
+      display:inherit;
+}           
+.labelmainscheduleclass{
+      z-index: inherit;
+      position: absolute;
+      left: 1011px;
+      top: 393px;
+      display:inherit;
+}
+.labelservtypeclass{
+      z-index: inherit;
+      position: absolute;
+      left: 705px;
+      top: 393px;
+      display: inherit;
+}
+.customerimageclass{
+      z-index: inherit;
+      position: absolute;
+      left: 1184px;
+      top: 249px;
+      width: 155px;
+      height: 125px;
+}
+.lblmainschedclass{
+      z-index: inherit;
+      position: absolute;
+      left: 446px;
+      top: 418px;
+      bottom: -433px;
+      height: 15px;
+      display: inherit;
+}
+.addtransactclass{
+      z-index: inherit;
+      position: absolute;
+      left: 560px;
+      top: -240px;
+      height: 20px;
+      width: 174px;
+}
+.lblsearchclass{
+      z-index: inherit;
+      position: absolute;
+      top: 14px;
+      right: 567px;
+      width: 70px;
+      height: 18px;
+      display: inherit;
+}      
+.transaction_save{
+      z-index:inherit;
+      position:fixed;
+      top:606px;
+      height:25px;
+      width:200px;
+      left:1050px;
+      display:inherit;
+}
+.lbltelnoclass2{
+      position:absolute;
+      left: 786px;
+      top: 5px;
+      width: 135px;
+      display:inherit;
+}
+
+          

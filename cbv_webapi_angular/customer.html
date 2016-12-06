@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html ng-app="myapp">
+   <head>
+        <title>Autoparts System</title>
+   
+        <link rel="icon" href="favicon.ico" />       
+        
+        <script src="js/Global.js"></script>     
+        <script src="jquery/jquery-1.10.2.js"></script>
+          
+        <script src="lib/jquery.min.js"></script>
+
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.js"></script>        
+
+        <link href="css/customer.css" rel="stylesheet"/>                       
+   </head>
+   <body>  
+       <div id ="customerdiv" class="customerclass" ng-controller="customercontroller"> 
+         
+            <label class="lblrfidclass">RFID_Code</label>
+            <label id="lblcustrequired" class="lblcustrequiredclass" ng-show="showrequired">All customer fields are required!!!</label>                                                                                                              
+                                                                                
+            <input ID="txtrfid2" class="txtrfid2class" MaxLength="10" ng-model="rfid2" ng-change="rfid2func(rfid2)" onkeydown="return(event.keycode!=13);" ng-keypress="Grfid2Code($event)"/>                                 
+                  
+            <input ID="txtrfid" class="txtrfidclass" MaxLength="10" ng-keyup="txtOnKeyPress($event)" TabIndex="1" onkeydown= "return (event.keyCode!=13);" ng-model="rfid" ng-disabled="rfid_model"/>                             
+
+            <source ID="sqldatasource1" runat="server" ConnectionString="Data Source=SAMSUNGLEO\SQLEXPRESS;Initial Catalog=AUTOPARTS;Integrated Security=true" DataSourceMode="DataReader" ProviderName="System.Data.SqlClient" SelectCommand="SELECT LTRIM(rfid_code) +'.               .'+ LTRIM(custnum) AS combined FROM customer"/> 
+
+            <label ID="lblcustid" class="lblcustidclass">Customer ID</label>               
+            <input ID="txtcustid" class="txtcustidclass" MaxLength="15" TabIndex="2" onkeydown = "return (event.KeyCode!=13);" ng-model="customerid" ng-disabled="customerid_model"/>
+                           
+            <label ID="lblcustomtype" class="lblcustomtypeclass">Customer Type</label>                     
+           
+            <select id="customtype" class="customtypeclass" ng-change="fcustomtype()" tabindex="3" ng-model="customertype" ng-disabled="customertype_model" autofocus>
+                    <option value=""></option>
+                    <option value="Individual">Individual</option>
+                    <option value="Company">Company</option>
+            </select>                                                         
+            
+            <input id="HiddenField2" type="hidden" runat="server"/>                               
+            <label ID="lblcompname" class="lblcompnameclass">Company name</label>             
+            <input ID="txtcompname" class="txtcompnameclass" MaxLength="35" TabIndex="4" ng-change="covertcompname(companyname)" ng-model="companyname" ng-disabled="companyname_model" ng-keypress="txtOnKeyPress2($event)" ng-keyup="compkeyup($event.keyCode)"/>
+           
+            <label ID="lbllastname" class="lbllastnameclass">Lastname</label>                            
+            <input ID="txtlastname" class="txtlastnameclass" MaxLength="18" TabIndex="5" ng-change="convertlast(lastname)" ng-model="lastname" ng-disabled="lastname_model" ng-keypress="lastnamekeypressed($event)" ng-keyup="lastkeyup($event.keyCode)"/>           
+               
+            <label ID="lblfirstname" class="lblfirstnameclass">Firstname</label>                                         
+            <input ID="txtfirstname" class="txtfirstnameclass" MaxLength="18"  TabIndex="6" ng-change="convertfirst(firstname)" ng-model="firstname" ng-disabled="firstname_model" ng-keypress="firstnamekeypress($event)" ng-keyup="firstnamekeyup($event.keyCode)"/>
+                              
+            <label ID="lblmiddlename" class="lblmiddlenameclass">Middle Name</label>         
+            <input ID="txtmiddlename" class="txtmiddlenameclass" MaxLength="18" TabIndex="7" ng-change="convertmiddle(middlename)" ng-model="middlename" ng-disabled="middlename_model" ng-keypress="middlenamekeypress($event)" ng-keyup="middlenamekeyup($event.keyCode)"/>
+                          
+            <label ID="lbladdress" class="lbladdressclass">Address</label>            
+            <textarea ID="txtaddress" class="txtaddressclass" MaxLength="100" TabIndex="8" ng-change="convertaddress(address)" ng-model="address" ng-disabled="address_model" ng-keyup="addresskeyup($event.keyCode)" TextMode="MultiLine"></textarea>
+            
+            <label ID="lbltelno" class="lbltelnoclass">Phone number</label>
+            <input ID="txttelno" class="txttelnoclass" MaxLength="14" TabIndex="9" ng-model="telephonenumber" ng-disabled="telephonenumber_model" ng-keypress="telnokeypress($event)" ng-keyup="telnokeyup($event.keyCode)"/>                               
+                       
+            <label ID="lbltel" class="lbltelclass" ng-model="lbltel_model" ng-show="lbltel_show">Please type the phone number including the areacode</label>
+            <label ID="lblmobilenum" class="lblmobilenumclass">Mobile number</label>
+            <input ID="txtmobilenum" class="txtmobilenumclass" ng-model="mobilenumber" MaxLength="11" ng-disabled="mobilenumber_model" ng-keypress="mobilekeypress($event)" ng-keyup="mobilekeyup($event.keyCode)"/>                        
+               
+            <label ID="lblemailadd" class="lblemailaddclass">Email address</label>
+            <input ID="txtemailadd" class="txtemailaddclass" MaxLength="30" TabIndex="11" ng-model="emailaddress" ng-disabled="emailaddress_model" ng-keyup="emailaddkeyup($event.keyCode)"/>
+                                                                                                                                                                                                                     
+            <label ID="lblbirthday"  class="lblbirthdayclass">Birthday</label>
+            <input ID="txtbirthday"  class="txtbirthdayclass" TabIndex="12" ng-model="birthday"  ng-disabled="birthday_model"  ng-keyup="birthdaykeyup($event.keyCode)" Type="date" ng-show="showbirthday" ng-click="birthdaykeyup($event.keyCode)"/>
+            <input ID="txtbirthday2" class="txtbirthday2class" TabIndex="13" ng-model="birthday2" ng-disabled="birthday2_model" ng-keyup="birthdaykeyup($event.keyCode)" Type="text" ng-show="showbirthday2"/>
+                                                                                                                                                                                                                      
+            <label ID="lblbirthplace" class="lblbirthplaceclass">Birth Place</label>
+            <input ID="txtbirthplace" class="txtbirthplaceclass" TabIndex="14" ng-change="convertbirthplace(birthplace)" ng-model="birthplace" ng-disabled="birthplace_model" ng-keyup="birtplacekeyup($event.keyCode)" MaxLength ="50"/>
+                                                                                                                                                
+            <label ID="lblnationality" class="lblnationalityclass">Nationality</label>
+            <input ID="txtnationality" class="txtnationalityclass" MaxLength="15" TabIndex="15" ng-change="convertnational(nationality)" ng-model="nationality" ng-disabled="nationality_model" ng-keyup="nationalkeyup($event.keyCode)"/>
+
+            <label ID="lblidtype" class="lblidtypeclass">ID Type</label>
+            <select id="sidtype"  class="sidtypeclass" name="sidtype" tabindex="16" ng-change="fsidtype(idtype)" ng-model="idtype" ng-disabled="idtype_model" ng-keyup="idtypekeyup($event.keyCode)">               
+                    <option value=""></option>
+                    <option value="PASSPORT">PASSPORT</option>
+                    <option value="SSS">SSS</option>
+                    <option value="TIN">TIN</option>
+                    <option value="VOTERS">VOTERS</option>
+                    <option value="DRIVER S LICENSE">DRIVER&#39;S LICENSE</option>
+                    <option value="SENIOR">SENIOR</option>
+                    <option value="GSIS">GSIS</option>
+                    <option value="OFW">OFW</option>
+                    <option value="SCHOOL">SCHOOL</option>
+                    <option value="OTHERS">OTHERS</option>
+            </select>
+
+            <label ID="lblidnumber" class="lblidnumberclass">ID number</label>               
+            <input ID="txtidnumber" class="txtidnumberclass" MaxLength="15" TabIndex="17" ng-change="convertidnumber(idnumber)" ng-model="idnumber" ng-disabled="idnumber_model" ng-keyup="idnumberkeyup($event.keyCode)"/>
+
+            <div id="confirmdiv" class="confirmdivclass" ng-model="confirmdiv_model" ng-show="confirmdiv_show">                                                         
+                     <button id="id_true"  type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue; border-width:thin;font-size:x-small" ng-click="mousesave($event)" ng-keyup="savingrec($event.keyCode)">SAVE</button>
+                     <button id="id_false" type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue; border-width:thin;font-size:x-small; margin-left:15px" ng-click="mousecancel($event)" ng-keyup="cancelrec($event.keyCode)">CANCEL</button>                                    
+            </div>    
+            
+            <input ID="txtcustid2"  class="txtcustid2class" TabIndex="18" ng-model="customerid2" ng-disabled="customerid2_model"/>
+            <label ID="Label2" class="Label2class">Customer Library</label>
+           
+                    <button ID="btnadd"    class="btnaddclass"    ng-click ="addcustomer($event)">Add customer</button>
+                    <button ID="btnedit"   class="btneditclass"   ng-click ="editcustomer($event)"   ng-model="editcustmodel"   ng-keyup="editcustkeyup($event.keyCode)">   Edit</button>
+                    <button ID="btndelete" class="btndeleteclass" ng-click ="deletecustomer($event)" ng-model="deletecustmodel" ng-keyup="deletecustkeyup($event.keyCode)"> Delete</button>
+                    <button ID="btnview"   class="btnviewclass"   ng-click ="viewcustomer($event)"   ng-model="viewcustmodel"   ng-keyup="viewcustkeyup($event.keyCode)">   View</button>
+                    <button ID="btnsearch" class="btnsearchclass" ng-click ="custsearch($event)">Search RFID</button> 
+           
+                    <!--<input ID="txtsearch"  class="txtsearchclass" Wrap="false" TabIndex="19" onkeyup="function (evt)" oninput="searchtext(this)" onkeydown="searchtext(this)" ng-model="customersearch" ng-show="showcustomersearch"/> -->                    
+                    <select id="customertype" class="customertypeclass" name="customertype" ng-change="customertypechange();" style="border: thin inset #0000FF" ng-model="customertypeseacrh" ng-show="showcustomertypeseacrh" ng-mouseenter="mouseenter($event)">
+                            <option value=""></option>
+                            <option value="Individual">Individual</option>                                                                                                                                                                        
+                            <option value="Company">Company</option>
+                    </select>                                                                                                                                                                                                                                               
+                    <input ID="txtsearch" class="txtsearchclass" Wrap="false" TabIndex="19" ng-keyup="searchtext($event.keyCode)" ng-model="customersearch" ng-show="showcustomersearch"/> 
+                    
+                    <!--<select ID="Listedit" class="Listeditclass" onkeypress="Submit()" ng-model="customerlist" ng-show="showcustomerlist" ng-keyup="listeditkeycode($event.keyCode)" multiple="multiple" display="none" ng-selected="customerlist">-->
+                    <select ID="Listedit" class="Listeditclass" ng-model="customerlist" ng-show="showcustomerlist" ng-keyup="listeditkeycode($event.keyCode)" ng-click="listeditkeycode2()" multiple="multiple" display="none">                                                                             
+                            <option ng-repeat="v in val | filter:customersearch | orderBy:v">{{v}}</option>                                                                                                                       
+                    </select>                                                                                                                                                                                            
+                                                                                                                                                              
+                    <Label ID="lblcarrefernces" class="lblcarreferncesclass">Car references : PLATE NUMBER #</Label>
+                                                                                                                                                                                                       
+           
+                    <select ID="ListBoxview" class="ListBoxviewclass" ng-model="listboxview" ng-show="showlistboxview" ng-keyup="listboxviewkeycode($event.keyCode)" multiple="multiple" dissplay="none">
+                            <option ng-repeat="v in val | filter:customersearch | orderBy:v">{{v}}</option>
+                    </select>
+
+
+                    <label ID="lblError" class="lblErrorclass">Label</label>
+                
+                    <label ID="lblline1" class="lblline1class"></label>
+
+                    <select ID="transactionlistbox" class="transactionlistboxclass" onkeypress="extract()" SelectionMode="Multiple" Visible="true" OnTextChanged="transactionlistbox_SelectedIndexChanged"></select>
+                                   
+                    <label ID="lbltelephone" class="lbltelnoclass2">Tephone number</label>                   
+
+                    <select id ="carrefdropdownlist" class="carrefdropdownlistclass" ondblclick="SQLconnect()" onchange="SQLconnect()"></select>
+                    <input ID ="carrefhidden" Value="none" type="hidden"/>
+     
+                    <source ID="SqlDataSource_grid" ConnectionString="Data Source=SAMSUNGLEO\SQLEXPRESS;Initial Catalog=AUTOPARTS;Integrated Security=true" ProviderName="System.Data.SqlClient" SelectCommand="select * from customer"/>
+
+                    <!--<label ID="lbledit" onclick ="clickseacrh()" visible="false"></label>-->                   
+
+                    <!--<input ID="Textlog2" runat="server" Visible="false"/>  -->      
+                    <input ID="HiddenField1" runat="server" type="hidden"/> 
+                    <input ID="HiddenField_edit" runat="server" type="hidden"/>
+                    <input ID="Hiddenfield_car" runat="server" type="hidden"/>
+                    <input ID="Hiddencar_edit" runat="server" type="hidden"/>
+                    <input ID="hiddenclick" runat="server" type="hidden"/>
+                    <input ID="hiddenfieldrfid" runat="server" type="hidden"/>
+                    <input ID="nosearch" runat="server" type="hidden"/>
+                    <input ID="confirmed" runat="server" type="hidden"/>
+                    <input ID ="no_option" runat="server" type="hidden"/>
+                    <input ID ="transaction_edit" runat="server" type="hidden"/>
+                    <input ID ="transact_value" runat="server" type="hidden"/>
+                    <!-- <input ID ="edit2" runat="server" type="hidden"/>-->
+
+                    <!--<select ID="resultlist" runat="server" class="resultlistclass"></select>-->
+                    <!--<img id ="customerimage" src="images/cbv_logo3.jpg" alt="customer_image" class="customerimageclass" />-->                                                                             
+
+                    <input ID="transactionedit" runat="server" type="hidden"/>
+                    <input ID="hiddentrnlistcount" runat="server" Value="0" type="hidden"/>
+                    <input ID="transact_skipload" runat="server" type="hidden"/>
+                    
+                    <label ID="lbledit" class="lbleditborderclass" ng-show="showeditborder"></label> 
+                    <label ID="lbleditcustid" class="lbledtcustidclass" ng-model="customerlabel" ng-show="showcustomer">Customer ID</label>                       
+                    <label ID="lblname" class="lblnameclass" ng-model="lastnamelabel" ng-show="showlastname">Lastname</label>
+                    <label ID="lblfirst" class="lblfirstclass" ng-model="firstnamelabel" ng-show="showfirstname">Firstname</label>
+                    <label ID="lblcomp" class="lblcompclass" ng-model="companynamelabel" ng-show="showcompanyname">Company Name</label>
+                    <label ID="lbltelname" = class="lbltelnameclass" ng-show="showlbltelname">Telephone number</label>
+                    <label ID="lblsearch" class="lblsearchclass" ng-model="searchlabel" ng-show="showsearch" Font-Bold="True" Font-Size="Small">Search by:</label>                              
+                                                                                                        
+       </div>                                                                                                                      
+                    <script src="js/customer_keypressr.js"></script>
+                    <script src="js/confirmation.js"></script>                     
+   </body>
+</html>
+                                                                                                                                                                                                  

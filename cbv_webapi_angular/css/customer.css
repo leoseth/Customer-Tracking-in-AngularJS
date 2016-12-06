@@ -1,0 +1,675 @@
+﻿
+body {
+    background-color:#fdffe0;
+}
+/*customer library css*/
+
+.customerclass{
+    position: absolute;
+    width: 1340px;
+    left: 4px;
+    background-color:#fcffe0;
+    height: 606px;
+    outline: solid;
+    color: rgb(51, 105, 30);
+}
+       
+.lblrfidclass{
+    position:absolute;
+    left: 15px;
+    top: 47px;
+    height: 12px;
+    width: 63px;
+    margin-bottom: 0px;
+    font-size:15px;
+}
+
+.lblcustrequiredclass{
+    position:absolute;
+    left: 160px;
+    top: 25px;
+    width: 300px;  
+    font-size:small;
+    font-weight:bold;
+    color:red;
+    display:inherit;          
+}
+
+.custtrackclass{
+    position:absolute;
+    top:4px;
+    left:1180px;
+    width:160px;
+    height:110px;
+    display:inherit;
+}
+
+/*position: absolute; "if you want movable"*/
+/*position: fixed; "if you want unmovable"*/
+
+.txtrfidclass {
+    position:absolute;
+    left: 159px;
+    top: 48px;
+    width: 172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    background-color:white;
+}
+
+.txtrfid2class{
+    position:absolute;
+    left: 370px;
+    top:  7px;
+    height: 20px;
+    width:130px;
+    display:inherit;
+    background-color:white;
+    border-color:white;
+    border-style:inset;
+    font-size:small;                    
+}
+
+.lblcustidclass{
+    position:absolute;
+    left: 15px;
+    top: 76px;
+    width: 107px;
+    height:15px;
+    font-size:15px;          
+}
+
+.txtcustidclass{
+    position:absolute;
+    left: 159px;
+    top: 76px;
+    width: 172px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lblcustomtypeclass {
+    position:absolute;
+    top: 101px;
+    left: 15px;
+    width: 108px;
+    font-size:15px;
+} 
+
+.customtypeclass {
+    position:absolute;
+    left: 159px;
+    top: 101px;
+    width: 175px;
+    font-family:Times New Roman;
+}
+
+.lblcompnameclass {
+    position:absolute;
+    left: 15px;
+    top: 134px;
+    height: 15px;
+    width: 102px;
+    right: 1229px;           
+}
+
+.txtcompnameclass {
+    position:absolute;
+    left: 159px;
+    top: 126px;
+    width: 249px;
+    right: 924px;
+    height: 18px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lbllastnameclass{
+    position:absolute;
+    left: 15px;
+    top: 158px;
+    width: 106px;
+    height: 17px;
+    font-size:15px;
+}
+
+.txtlastnameclass{
+    position:absolute;
+    left: 159px;
+    top: 159px;
+    width: 248px;
+    margin-bottom: 0px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lblfirstnameclass{
+    position:absolute;
+    left: 15px;
+    top: 183px;
+    width: 110px;
+}
+
+.txtfirstnameclass{
+    position:absolute;
+    left: 159px;
+    top: 185px;
+    width: 250px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lblmiddlenameclass{
+    position:absolute;
+    left: 451px;
+    top: 45px;
+    width: 100px;
+    height: 19px;
+    font-size:15px;
+}
+
+.txtmiddlenameclass{
+    position:absolute;
+    left: 580px;
+    top:  39px;
+    width: 171px;
+    height: 17px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lbladdressclass{
+    position:absolute;
+    left: 453px;
+    top: 76px;
+    width: 79px;
+    font-size:15px;
+}
+
+.txtaddressclass {
+    position:absolute;
+    left: 580px;
+    top: 68px;
+    height: 35px;
+    width: 252px;  
+    font-size:11px;
+    font-family:Times New Roman;  
+}
+
+.lbltelnoclass{
+    position:absolute;
+    left: 452px;
+    top: 115px;
+    width: 98px;
+    font-size:15px;
+}
+
+.txttelnoclass{
+    position:absolute;
+    left: 580px;
+    top: 112px;
+    width: 171px;
+    height: 18px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lbltelclass{
+    position:absolute;
+    left: 580px;
+    top: 141px;
+    height: 15px;
+    display:inherit;
+    font-size:small;color:blue;
+}
+
+.lblmobilenumclass{
+    position:absolute;
+    left: 453px;
+    top: 158px;
+    font-size:15px;
+}
+
+.txtmobilenumclass{
+    position:absolute;
+    left: 581px;
+    top: 156px;
+    width: 171px;
+    font-size:12px;
+    font-family:Times New Rona;
+}
+
+.testclass{
+    position:absolute;
+    left: 781px;
+    top: 156px;
+    width: 171px;
+    font-size:12px;
+}
+
+.lblemailaddclass{
+    position:absolute;
+    left: 454px;
+    top: 188px;
+    font-size:15px;
+}
+
+.txtemailaddclass {
+    position:absolute;
+    left: 582px;
+    top: 184px;
+    width: 171px;
+    font-size:12px;
+    font-family:Times New Roman;
+} 
+
+.lblbirthdayclass{
+    position:absolute;
+    left: 886px;
+    top: 44px;
+    font-size:15px;
+}
+
+.txtbirthdayclass {
+    position:absolute;
+    left: 995px;
+    top: 42px;
+    width: 172px;
+    height:18px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+.txtbirthday2class {
+    position:absolute;
+    left: 995px;
+    top: 42px;
+    width: 172px;
+    height:18px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lblbirthplaceclass {
+    position:absolute;
+    left: 886px;
+    top: 80px;
+    width: 73px;
+    font-size:15px;
+}
+
+.txtbirthplaceclass {
+    position:absolute;
+    left: 995px;
+    top: 78px;
+    width: 172px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.lblnationalityclass{
+    position:absolute;
+    left: 886px;
+    top: 113px;
+    font-size:15px;
+}
+
+.txtnationalityclass{
+     position:absolute;
+     left: 995px;
+     top: 111px;
+     width: 173px;
+     display: inherit;
+     font-size:12px;
+     font-family:Times New Roman;
+}
+
+.lblidtypeclass {
+    position:absolute;
+    left: 886px;
+    top: 146px;
+    font-size:15px;
+}
+
+.sidtypeclass{
+    position:absolute;
+    left: 995px;
+    top: 144px;
+    width: 180px;
+    font-family:Times New Roman;
+}
+
+.lblidnumberclass{
+    position:absolute;
+    left: 886px;
+    top: 183px;
+    width: 76px;
+    height: 18px;
+    font-size:15px;
+}
+
+.txtidnumberclass{
+    position:absolute;
+    left: 995px;
+    top: 179px;
+    width: 175px;
+    height: 22px;
+    font-size:12px;
+    font-family:Times New Roman;
+}
+
+.txtcustid2class {
+    position:absolute;
+    top: 10px;
+    left: 610px;
+    width: 116px;
+    /*right: 231px;*/
+    visibility:hidden;
+    font-family:Times New Roman;
+} 
+
+.lblcustlibclass{
+    position:absolute;
+    left: 10px;
+    top: 9px;
+    width: 131px;             
+    display: inherit;
+    font-weight:bold;
+    color:blue;
+    font-size:medium;
+    border-style:none;
+    font-family:Times New Roman; 
+}
+  
+.btnaddclass{    
+    position:absolute;
+    margin-right: 39px;
+    left: 29px;
+    top: 215px;
+    height: 19px;
+    width:110px;     
+    line-height: 5px;
+    font-size:11px;  
+    font-family:Times New Roman; 
+}
+
+.btneditclass{
+    position:absolute;
+    left: 138px;
+    top: 215px;
+    height: 19px;
+    width:110px;
+    line-height: 5px;
+    font-size:11px; 
+    font-family:Times New Roman;
+}
+
+.btndeleteclass{
+    position:absolute;
+    left: 247px;
+    top: 215px;
+    height: 19px;
+    width:110px;
+    line-height: 5px;
+    font-size:11px; 
+    font-family:Times New Roman;
+} 
+
+.btnviewclass{
+    position:absolute;
+    left: 356px;
+    top: 215px;
+    height: 19px;
+    width:110px;
+    line-height: 5px;
+    font-size:11px; 
+    font-family:Times New Roman;
+}
+
+.btnsearchclass{
+    position:absolute;
+    left: 465px;
+    top: 215px;
+    height: 19px;
+    width:113px;
+    line-height: 5px;
+    font-size:11px; 
+    font-family:Times New Roman;
+}  
+
+.txtsearchclass {
+    position:absolute;
+    top: 6px;
+    width: 202px;
+    left: 875px;
+    height: 22px;   
+    border-color:#8080FF;
+    border-width:1px;
+    display:none;
+    font-family:Times New Roman;
+}
+
+.customertypeclass {
+    position: absolute;
+    left: 775px;
+    top: 6px;
+    width: 100px;
+    height: 25px;
+    font-size: 13px;
+    font-family: Times New Roman;
+    border-color: #9E9E9E;
+    border-style: solid;
+    border-width: 24px;
+    color: rgb(51, 105, 30);
+    display: none;
+}                         
+
+.Listeditclass{
+    position:absolute;
+    left    :153px;
+    top     :30px;
+    width: 927px;
+    height: 180px;
+    font-family : Courier New, Courier, monospace; font-size:12px;
+    background-color:#fcffe0;
+    color: rgb(51, 105, 30);
+    border-width:3px;
+    display:none;
+} 
+.span {display:inline-block; margin-right:200px;}         
+ 
+.lblcarreferncesclass {
+    position:absolute;
+    left: 582px;
+    top: 218px;
+    width: 212px;
+    display:inherit;
+    font-weight:bold;
+    font-size:small;
+    color:blue;
+    border-width:1px;
+    border-style:inset;
+} 
+
+.ListBoxviewclass {
+    position:absolute;
+    top: 30px;
+    left: 127px;
+    width: 1179px;
+    height: 180px;
+    bottom: 566px;
+    display:inline;
+    font-family : Courier New, Courier, monospace; font-size:12px;
+    background-color:#fcffe0;
+    color: rgb(51, 105, 30);
+    border-width:3px;
+    display:none;
+}
+
+.lblErrorclass{
+    position:absolute;
+    left: 1180px;
+    top: 5px;
+    width: 129px;
+    right: 31px;
+    font-size:15px;
+    display:none;
+    color:red;
+    font-weight:bold;
+} 
+
+.lblline1class {
+    position:absolute;
+    left: 0px;
+    top: 240px;
+    width: 1338px;
+    height: 5px;
+    background-color:blue;           
+    border-style:solid;
+    border-width:1px;
+}
+
+.transactionlistboxclass{
+    position:absolute;
+    left: 4px;
+    top: 414px;
+    height: 211px;
+    width: 1332px;
+    display: none;
+    background-color:#FFFFCA;
+    font-variant:normal;
+    font-style:normal;
+    font-family:'Times New Roman';
+    color:#0000A0;
+    
+}
+
+.lblcompclass {
+    position:absolute;
+    left: 564px;
+    top: 14px;
+    width: 135px;   
+    font-size:15px;
+    display:none;
+}
+
+.lbltelnameclass{
+    position:absolute;
+    left:738px;
+    top:14px;
+    width:135px;
+    font-size:15px;
+    display:none;
+}
+
+
+.lbltelnoclass2{
+    position:absolute;
+    left: 786px;
+    top: 5px;
+    width: 135px;
+    display:none;
+    font-size:15px;
+}
+  
+.carrefdropdownlistclass {
+    position:absolute;
+    left: 794px;
+    top: 216px;
+    right: 396px;
+    width:150px;
+}           
+
+.lbleditborderclass{
+    position: absolute;
+    top: 6px;
+    left: 153px;
+    height: 22px;
+    width: 621px;
+    display: inherit;
+    color: rgb(51, 105, 30);
+    border-color: #9E9E9E;
+    border-style: solid;
+    border-width: 2px;
+    display: none;    
+}
+
+.Textlog2class {
+    position:absolute;
+    top: 250px;
+    left: 759px;
+    width: 408px;
+    display:inherit;
+    color:#0000A0;
+    font-weight:bold;
+    font-size:x-small;
+    font-family:Arial;
+}
+
+.resultlistclass{
+    position:absolute;
+    left: 200px;
+    top: 37px;
+    width: 1000px;
+    height: 148px;
+    display:inherit;
+    background-color:lightsteelblue;
+    text-wrap:normal;
+    font-size:x-small;
+    font-family:Tahoma;
+    text-decoration-color:white;              
+}
+           
+.confirmdivclass{
+    position:absolute;
+    left: 996px;
+    top: 215px;           
+    width:500px;
+    display:none;
+}
+
+.lbleditclass{
+    position:absolute;
+    height:18px;
+    top:10px;
+    left:153px;
+    width:620px; 
+    border-width:1px;
+    border-color:black;
+    display:inline;   
+}
+
+.lbledtcustidclass {
+    position:absolute;
+    left: 155px;
+    top: 12px;
+    display:none;
+}
+
+.lblsearchclass{
+    position:absolute;
+    top: 13px;
+    left: 706px;
+    width: 70px;
+    height: 18px;
+    display:none;
+}  
+
+.lblnameclass {
+    position:absolute;
+    left: 299px;
+    top: 11px;
+    width: 124px;
+    display:none;
+}
+
+.lblfirstclass {
+    position:absolute;
+    left: 437px;
+    top: 12px;
+    width: 79px;
+    display:none;
+}                         
+/*customer library css*/
+
+
+

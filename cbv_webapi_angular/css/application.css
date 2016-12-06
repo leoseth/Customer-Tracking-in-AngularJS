@@ -1,0 +1,16 @@
+#list-shopping td, #list-shopping th {
+	text-align:center;
+}
+.compare-true {
+	text-decoration: line-through;
+	color: blue;
+}
+.page-header {
+    padding-bottom: 50px;
+    background-color: green;
+    color: white;
+}
+
+.icon-facebook-with-circle{
+    content: "\ea66";
+}

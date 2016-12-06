@@ -1,0 +1,250 @@
+﻿      
+.Panel1class{ 
+     z-index: inherit;
+     position: absolute;
+     left  : 10px;
+     top: 61px;
+     width: 728px;
+     height: 315px;
+     background-color:white;
+}
+.txtuserid2class{
+     z-index: inherit;
+     position: absolute;
+     left: 22px;
+     top: 24px;
+     width: 545px;
+     display:inherit;
+}
+.Label2class{
+     z-index: inherit;
+     position: absolute;
+     left: 22px;
+     top: 24px;
+     width: 545px;
+     display:inherit;
+}
+
+.Panel2class{
+     z-index: inherit;
+     position: absolute;
+     left: 14px;
+     top: 283px;
+     width: 547px;
+     height: 23px;
+}
+.btnaddclass{
+     margin-right: 39px;
+     z-index: inherit;
+     position: absolute;
+     left: -1px;
+     top: 1px;
+     height: 23px;
+     width:110px;
+ }
+.btneditclass{
+     z-index: inherit;
+     position: absolute;
+     left: 108px;
+     top: 1px;
+     width: 101px;
+     height: 23px;
+     width:110px;
+}
+.btndeleteclass{
+     z-index: inherit;
+     position: absolute;
+     left: 217px;
+     top: 1px;
+     height: 23px;
+     width:110px;
+}
+.btnquitclass{
+     z-index: inherit;
+     position: absolute;
+     left: 435px;
+     top: 1px;
+     height: 23px;
+     width:110px;
+}
+.btnviewclass{
+     z-index: inherit;
+     position: absolute;
+     left: 326px;
+     top: 1px;
+     height: 23px;
+     width:110px;
+}        
+.useraccessclass{
+     width: 734px;
+     height: 13px;
+}
+        
+.Listeditclass{
+     z-index: inherit;
+     position: absolute;
+     left: 2px;
+     top: 25px;
+     width: 584px;
+     height: 180px;
+     display:inherit;
+}                           
+
+#TextArea1{
+     margin-top: 259px;
+}
+
+.Textlogclass {
+     z-index: inherit;
+     position: absolute;
+     top: 319px;
+     left: 35px;
+     width: 383px;
+}
+.txtuserid2class {
+     z-index: inherit;
+     position: absolute;
+     top: 251px;
+     left: 507px;
+     width: 174px;
+     display:inherit;
+}
+.lbltopusernameclass {
+     z-index: inherit;
+     position: absolute;
+     left: 143px;
+     top: 68px;
+     width: 87px;
+     display:inherit;
+     right: 1007px;
+}
+.lbltopuseridclass {
+     z-index: inherit;
+     position: absolute;
+     left: 6px;
+     top: 68px;
+     width: 63px;
+     right: 1168px;
+     display:inherit;
+}
+.Label3class{
+     z-index: inherit;
+     position: absolute;
+     left: 21px;
+     top: 78px;
+     width: 135px;
+     display: inherit;
+}
+.txtuseridclass{
+     z-index: inherit;
+     position: absolute;
+     left: 140px;
+     top: 75px;
+     width: 300px;
+}
+.txtpositionclass{
+     z-index: inherit;
+     position: absolute;
+     left: 140px;
+     top: 227px;
+     width: 300px;
+}
+.lblErrorclass{
+     z-index: inherit;
+     position: absolute;
+     left: 460px;
+     top: 229px;
+     width: 178px;
+     right: 90px;
+}
+.Label7class{
+     z-index: inherit;
+     position: absolute;
+     left: 21px;
+     top: 225px;
+     width: 135px;
+     height: 18px;
+}
+.cmbaccessclass{
+     z-index: inherit;
+     position: absolute;
+     left: 140px;
+     top: 197px;
+     width: 308px;
+     display: inherit;
+}
+.Label5class{
+    z-index: inherit;
+    position: absolute;
+    left: 22px;
+    top: 196px;
+    width: 104px;
+    display: inherit;
+}
+.txtpasswordclass{
+    z-index: inherit;
+    position: absolute;
+    left: 140px;
+    top: 167px;
+    width: 298px;
+    display: inherit;
+}
+.labelpasswordclass{
+    z-index: inherit;
+    position: absolute;
+    left: 21px;
+    top: 167px;
+    width: 88px;
+    display: inherit;
+}
+.Label4class{
+    z-index: inherit;
+    position: absolute;
+    left: 21px;
+    top: 109px;
+    width: 135px;
+    display: inherit;
+}
+.txtusernameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 140px;
+    top: 106px;
+    width: 300px;
+    display: inherit;
+}
+.txtfullnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 140px;
+    top: 136px;
+    width: 300px;
+    display:inherit;
+    right: 280px;
+}
+.labelfullnameclass{
+    z-index: inherit;
+    position: absolute;
+    left: 22px;
+    top: 136px;
+}
+.lbleditclass{
+    z-index: inherit;
+    position: absolute;
+    top: 64px;
+    left: 15px;
+    height: 24px;
+    width: 583px;
+    right: 658px;
+    display: inherit;
+}       
+.ListBoxview3class{
+    z-index: inherit;
+    position: absolute;
+    top: 25px;
+    left: 2px;
+    width: 712px;
+    height: 180px;
+    display: inherit;
+}
+   

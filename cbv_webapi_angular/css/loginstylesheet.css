@@ -1,0 +1,27 @@
+﻿body {
+     /*background:url('images/carservies6.jpg')  #A98436 no-repeat left top;*/
+      background:url("../images/cbvlogo_final.jpg");
+     -webkit-background-size:cover;
+     -moz-background-size:cover;
+     -background-size:cover;
+     }
+.logincdivlass{
+     width: 1307px;
+     height: 497px;
+}
+.Panel1class{
+     z-index: inherit;
+     position: absolute;
+     left: 479px;
+     top: 179px;
+}
+.Login1class{
+    z-index: inherit;
+    position: absolute;
+    left: 27px;
+    top: 19px;
+    width: 301px;
+    height: 208px;
+}
+
+ 

@@ -1,0 +1,356 @@
+﻿<!DOCTYPE html>
+<html ng-app="myapp">
+   <head>
+        <meta charset ="utf-8">
+        <title>Autoparts System</title>
+   
+        <link rel="icon" href="favicon.ico" />       
+        
+        <script src="js/Global.js"></script>     
+        <script src="jquery/jquery-1.10.2.js"></script>
+          
+        <script src="lib/jquery.min.js"></script>
+
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-route.js"></script>        
+
+        <link href="css/customer.css" rel="stylesheet"/> 
+        <link href="css/car.css" rel="stylesheet" /> 
+        <link href="css/trans.css" rel="stylesheet" />                                
+   </head>
+   <body> 
+      <!--//// this is for customer panel main div ////-->
+       <div id ="customerdiv" class="customerclass" ng-controller="customercontroller"> 
+         
+            <label class="lblrfidclass">RFID_Code</label>
+            <label id="lblcustrequired" class="lblcustrequiredclass" ng-show="showrequired">All customer fields are required!!!</label>                                                                                                              
+            <img   id="customer_tracking_image" class="custtrackclass" src="images/custracking1.png" alt="customer_tracking_image"/> 
+                                                                                
+            <input ID="txtrfid2" class="txtrfid2class" MaxLength="10" ng-model="rfid2" ng-change="rfid2func(rfid2)" onkeydown="return(event.keycode!=13);" ng-keypress="Grfid2Code($event)"/>                                 
+                  
+            <input ID="txtrfid" class="txtrfidclass" MaxLength="10" ng-keyup="txtOnKeyPress($event)" TabIndex="1" onkeydown= "return (event.keyCode!=13);" ng-model="rfid" ng-disabled="rfid_model"/>                             
+            
+            <label ID="lblcustid" class="lblcustidclass">Customer ID</label>               
+            <input ID="txtcustid" class="txtcustidclass" MaxLength="15" TabIndex="2" onkeydown = "return (event.KeyCode!=13);" ng-model="customerid" ng-disabled="customerid_model"/>
+                           
+            <label ID="lblcustomtype" class="lblcustomtypeclass">Customer Type</label>                     
+           
+            <select id="customtype" class="customtypeclass" ng-change="fcustomtype()" tabindex="3" ng-model="customertype" ng-disabled="customertype_model" autofocus>
+                    <option value=""></option>
+                    <option value="Individual">Individual</option>
+                    <option value="Company">Company</option>
+            </select>                                                         
+                                      
+            <input id="HiddenField2" type="hidden"/>  
+            <label ID="lblcompname" class="lblcompnameclass">Company name</label>             
+            <input ID="txtcompname" class="txtcompnameclass" MaxLength="35" TabIndex="4" ng-change="covertcompname(companyname)" ng-model="companyname" ng-disabled="companyname_model" ng-keypress="txtOnKeyPress2($event)" ng-keyup="compkeyup($event.keyCode)"/>
+           
+            <label ID="lbllastname" class="lbllastnameclass">Lastname</label>                            
+            <input ID="txtlastname" class="txtlastnameclass" MaxLength="18" TabIndex="5" ng-change="convertlast(lastname)" ng-model="lastname" ng-disabled="lastname_model" ng-keypress="lastnamekeypressed($event)" ng-keyup="lastkeyup($event.keyCode)"/>           
+               
+            <label ID="lblfirstname" class="lblfirstnameclass">Firstname</label>                                         
+            <input ID="txtfirstname" class="txtfirstnameclass" MaxLength="18"  TabIndex="6" ng-change="convertfirst(firstname)" ng-model="firstname" ng-disabled="firstname_model" ng-keypress="firstnamekeypress($event)" ng-keyup="firstnamekeyup($event.keyCode)"/>
+                              
+            <label ID="lblmiddlename" class="lblmiddlenameclass">Middle Name</label>         
+            <input ID="txtmiddlename" class="txtmiddlenameclass" MaxLength="18" TabIndex="7" ng-change="convertmiddle(middlename)" ng-model="middlename" ng-disabled="middlename_model" ng-keypress="middlenamekeypress($event)" ng-keyup="middlenamekeyup($event.keyCode)"/>
+                          
+            <label ID="lbladdress" class="lbladdressclass">Address</label>            
+            <textarea ID="txtaddress" class="txtaddressclass" MaxLength="100" TabIndex="8" ng-change="convertaddress(address)" ng-model="address" ng-disabled="address_model" ng-keyup="addresskeyup($event.keyCode)" TextMode="MultiLine"></textarea>
+            
+            <label ID="lbltelno" class="lbltelnoclass">Phone number</label>
+            <input ID="txttelno" class="txttelnoclass" MaxLength="14" TabIndex="9" ng-model="telephonenumber" ng-disabled="telephonenumber_model" ng-keypress="telnokeypress($event)" ng-keyup="telnokeyup($event.keyCode)"/>                               
+                       
+            <label ID="lbltel" class="lbltelclass" ng-model="lbltel_model" ng-show="lbltel_show">Please type the phone number including the areacode</label>
+            <label ID="lblmobilenum" class="lblmobilenumclass">Mobile number</label>
+            <input ID="txtmobilenum" class="txtmobilenumclass" ng-model="mobilenumber" MaxLength="11" ng-disabled="mobilenumber_model" ng-keypress="mobilekeypress($event)" ng-keyup="mobilekeyup($event.keyCode)"/>                        
+               
+            <label ID="lblemailadd" class="lblemailaddclass">Email address</label>
+            <input ID="txtemailadd" class="txtemailaddclass" MaxLength="30" TabIndex="11" ng-model="emailaddress" ng-disabled="emailaddress_model" ng-keyup="emailaddkeyup($event.keyCode)"/>
+                                                                                                                                                                                                                     
+            <label ID="lblbirthday"  class="lblbirthdayclass">Birthday</label>
+            <input ID="txtbirthday"  class="txtbirthdayclass" TabIndex="12" ng-model="birthday"  ng-disabled="birthday_model"  ng-keyup="birthdaykeyup($event.keyCode)" Type="date" ng-show="showbirthday" ng-click="birthdaykeyup($event.keyCode)"/>
+            <input ID="txtbirthday2" class="txtbirthday2class" TabIndex="13" ng-model="birthday2" ng-disabled="birthday2_model" ng-keyup="birthdaykeyup($event.keyCode)" Type="text" ng-show="showbirthday2"/>
+                                                                                                                                                                                                                      
+            <label ID="lblbirthplace" class="lblbirthplaceclass">Birth Place</label>
+            <input ID="txtbirthplace" class="txtbirthplaceclass" TabIndex="14" ng-change="convertbirthplace(birthplace)" ng-model="birthplace" ng-disabled="birthplace_model" ng-keyup="birtplacekeyup($event.keyCode)" MaxLength ="50"/>
+                                                                                                                                                
+            <label ID="lblnationality" class="lblnationalityclass">Nationality</label>
+            <input ID="txtnationality" class="txtnationalityclass" MaxLength="15" TabIndex="15" ng-change="convertnational(nationality)" ng-model="nationality" ng-disabled="nationality_model" ng-keyup="nationalkeyup($event.keyCode)"/>
+
+            <label ID="lblidtype" class="lblidtypeclass">ID Type</label>
+            <select id="sidtype"  class="sidtypeclass" name="sidtype" tabindex="16" ng-change="fsidtype(idtype)" ng-model="idtype" ng-disabled="idtype_model" ng-keyup="idtypekeyup($event.keyCode)">               
+                    <option value=""></option>
+                    <option value="PASSPORT">PASSPORT</option>
+                    <option value="SSS">SSS</option>
+                    <option value="TIN">TIN</option>
+                    <option value="VOTERS">VOTERS</option>
+                    <option value="DRIVER S LICENSE">DRIVER&#39;S LICENSE</option>
+                    <option value="SENIOR">SENIOR</option>
+                    <option value="GSIS">GSIS</option>
+                    <option value="OFW">OFW</option>
+                    <option value="SCHOOL">SCHOOL</option>
+                    <option value="OTHERS">OTHERS</option>
+            </select>
+
+            <label ID="lblidnumber" class="lblidnumberclass">ID number</label>               
+            <input ID="txtidnumber" class="txtidnumberclass" MaxLength="15" TabIndex="17" ng-change="convertidnumber(idnumber)" ng-model="idnumber" ng-disabled="idnumber_model" ng-keyup="idnumberkeyup($event.keyCode)"/>
+            
+            <input ID="txtcustid2"  class="txtcustid2class" TabIndex="18" ng-model="customerid2" ng-disabled="customerid2_model"/>
+            <label ID="lblcustlib" class="lblcustlibclass">Customer Library</label>
+           
+                    <button ID="btnadd"    class="btnaddclass"    ng-click ="addcustomer($event)">Add customer</button>
+                    <button ID="btnedit"   class="btneditclass"   ng-click ="editcustomer($event)"   ng-model="editcustmodel"   ng-keyup="editcustkeyup($event.keyCode)">   Edit</button>
+                    <button ID="btndelete" class="btndeleteclass" ng-click ="deletecustomer($event)" ng-model="deletecustmodel" ng-keyup="deletecustkeyup($event.keyCode)"> Delete</button>
+                    <button ID="btnview"   class="btnviewclass"   ng-click ="viewcustomer($event)"   ng-model="viewcustmodel"   ng-keyup="viewcustkeyup($event.keyCode)">   View</button>
+                    <button ID="btnsearch" class="btnsearchclass" ng-click ="custsearch($event)">Search RFID</button> 
+                              
+                    <select id="customertype" class="customertypeclass" name="customertype" ng-change="customertypechange();" style="border: thin inset #0000FF" ng-model="customertypeseacrh" ng-show="showcustomertypeseacrh" ng-mouseenter="mouseenter($event)">
+                                <option value=""></option>
+                                <option value="Individual">Individual</option>                                                                                                                                                                        
+                                <option value="Company">Company</option>
+                    </select>                                                                                                                                                                                                                                               
+                    <input ID="txtsearch" class="txtsearchclass" Wrap="false" TabIndex="19" ng-keyup="searchtext($event.keyCode)" ng-model="customersearch" ng-show="showcustomersearch"/> 
+                                        
+                    <select ID="Listedit" class="Listeditclass" ng-model="customerlist" ng-show="showcustomerlist" ng-keyup="listeditkeycode($event.keyCode)" ng-click="listeditkeycode2()" multiple="multiple">                                                                             
+                            <option ng-repeat="v in val | filter:customersearch | orderBy:v">{{v}}</option>                                                                                                                       
+                    </select>                                                                                                                                                                                            
+                                                                                                                                                              
+                    <Label ID="lblcarrefernces" class="lblcarreferncesclass">Car references : PLATE NUMBER #</Label>                                                                                                                                                                                                       
+           
+                    <select ID="ListBoxview" class="ListBoxviewclass" ng-model="listboxview" ng-show="showlistboxview" ng-keyup="listboxviewkeycode($event.keyCode)" ng-click="listboxviewkeycode2()" multiple="multiple" display="none">
+                            <option ng-repeat="v in val | filter:customersearch | orderBy:v">{{v}}</option>
+                    </select>
+
+                    <label ID="lblError" class="lblErrorclass">Label</label>
+                
+                    <label ID="lblline1" class="lblline1class"></label>
+
+                    <select ID="transactionlistbox" class="transactionlistboxclass" onkeypress="extract()" SelectionMode="Multiple" Visible="true" OnTextChanged="transactionlistbox_SelectedIndexChanged"></select>
+                                   
+                    <label ID="lbltelephone" class="lbltelnoclass2">Tephone number</label>                   
+
+                    <select id ="carrefdropdownlist" class="carrefdropdownlistclass" ondblclick="SQLconnect()" onchange="SQLconnect()"></select>
+                    <input ID  ="carrefhidden" Value="none" type="hidden"/>
+                         
+                    <input ID ="nosearch" type="hidden"/>
+                    <input ID ="confirmed" type="hidden"/>
+                    <input ID ="no_option" type="hidden"/>
+                    <input ID ="transaction_edit" type="hidden"/>
+                    <input ID ="transact_value" type="hidden"/>                    
+
+                    <!--<img id ="customerimage" src="images/cbv_logo3.jpg" alt="customer_image" class="customerimageclass" />-->                                                                             
+
+                    <input ID="transactionedit" type="hidden"/>
+                    <input ID="hiddentrnlistcount" Value="0" type="hidden"/>
+                    <input ID="transact_skipload" type="hidden"/>
+                    
+                    <label ID="lbledit" class="lbleditborderclass" ng-show="showeditborder"></label> 
+                    <label ID="lbleditcustid" class="lbledtcustidclass" ng-model="customerlabel" ng-show="showcustomer">Customer ID</label>                       
+                    <label ID="lblname" class="lblnameclass" ng-model="lastnamelabel" ng-show="showlastname">Lastname</label>
+                    <label ID="lblfirst" class="lblfirstclass" ng-model="firstnamelabel" ng-show="showfirstname">Firstname</label>
+                    <label ID="lblcomp" class="lblcompclass" ng-model="companynamelabel" ng-show="showcompanyname">Company Name</label>
+                    <label ID="lbltelname" = class="lbltelnameclass" ng-show="showlbltelname">Telephone number</label>
+                    <label ID="lblsearch" class="lblsearchclass" ng-model="searchlabel" ng-show="showsearch" Font-Bold="True" Font-Size="Small">Search by:</label>  
+           
+            <div id="confirmdiv" class="confirmdivclass" ng-show="confirmdiv_show">  
+                     <button id="id_true"  type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue; border-width:thin;font-size:x-small" ng-click="mousesave($event)" ng-keyup="savingrec($event.keyCode)">SAVE</button>
+                     <button id="id_false" type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue; border-width:thin;font-size:x-small; margin-left:15px" ng-click="mousecancel($event)" ng-keyup="cancelrec($event.keyCode)">CANCEL</button>                                    
+            </div>                               
+                                                                                                        
+       <!--</div>
+       <!--//// this is for customer panel ////-->
+
+                <!--//// this is for car panel  sub-div ////-->
+                <div id="cardiv" class="carclass" ng-controller="carcontroller">
+                         <label id ="lblcarlib" class="lblcarlibclass">Car Library</label>                                                             
+              
+                         <label id ="lblplatenum" class="lblplatenumclass">Plate number</label>
+                         <input id="txtplatenum"  class="txtplatenumclass" Maxlength="9" ng-model="platenumber" ng-disabled="platenum_model" ng-show="showplatenum" ng-keyup="platenumberkeyup($event.keyCode)"/>
+
+                         <label id="lblmake" class="lblmakeclass">Make</label>
+                         <input id="txtmake" class="txtmakeclass" MaxLength="25" ng-model="make" ng-disabled="make_model" ng-show="showmake" ng-keyup="makekeyup($event.keyCode)"/>
+
+                         <label id="lblmodel" class="lblmodelclass">Model</label>
+                         <input id="txtmodel" class="txtmodelclass" MaxLength="25" ng-model="model" ng-disabled="model_model" ng-show="showmodel" ng-keyup="modelkeyup($event.keyCode)"/>
+                                                                                  
+                         <label id="lblregisnum" class="lblregisnumclass">Registration no.</label>
+                         <input id="txtregisnum" class="txtregisnumclass" MaxLength="9" ng-model="registrationnum" ng-disabled="registrationnum_model" ng-show="showregistrationnum" ng-keyup="registrationkeyup($event.keyCode)"/>
+
+                         <label id="lblregisdate" class="lblregisdateclass">Registration date</label>
+                         <input id="txtregisdate" class="txtregisdateclass" type="date" ng-model="registrationdate" ng-disabled="registrationdate_model" ng-show="showregistrationdate" ng-keyup="registrationdatekeyup($event.keyCode)"/>
+
+                         <label id="lblcolor" class="lblcolorclass">Color</label>
+                         <input id="txtcolor" class="txtcolorclass" MaxLength="11" ng-model="color" ng-disabled="color_model" ng-show="showcolor" ng-keyup="colorkeyup($event.keyCode)"/>  
+           
+                         <label id="lblchasisnum" class="lblchasisnumclass">Chasis number</label>            
+                         <input id="txtchasisnum" class="txtchasisnumclass" MaxLength="15" ng-model="chasisnumber" ng-disabled="chasisnumber_model" ng-show="showchasisnumber" ng-keyup="chasisnumberkeyup($event.keyCode)"/>
+
+                         <label id="lblenginenum" class="lblenginenumclass">Engine number</label>
+                         <input id="txtenginenum" class="txtenginenumclass" MaxLength="15" ng-model="enginenumber" ng-disabled="enginenumber_model" ng-show="showenginenumber" ng-keyup="enginenumberkeyup($event.keyCode)" ng-keypress="enginekeypress($event)"/>
+
+                         <button id ="btnaddcar"      class="btnaddcarclass"      ng-click="addcar($event)">Add car</button>
+                         <button id ="btneditcar"     class="btneditcarclass"     ng-click="editcar($event)"   ng-keyup ="btneditcarkeyup($event.keyCode)"   ng-mousemove="searchplatenumfocus($event)">Edit</button>
+                         <button id ="btndeletecar"   class="btndeletecarclass"   ng-click="deletecar($event)" ng-keyup ="btndeletecarkeyup($event.keyCode)" ng-mousemove="searchplatenumfocus($Event)">Delete</button>
+                         <button id ="btnviewcar"     class="btnviewcarclass"     ng-click="viewcar($event)"   ng-keyup ="btnviewcarkeyup($event.keyCode)"   ng-mousemove="searchplatenumfocus($Event)">View</button>
+                         <button id ="btnaddtransact" class="btnaddtransactclass" ng-click="addtransact($event)">Add transaction</button>                                            
+
+                         <div id ="cardivconfirm" class="cardivconfirmclass" ng-show="showcardivconfirm" ng-keyup="cardivconfirmkeyup($event.keyCode)" >
+                                  <button id="car_true"   type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue;border-width:thin;font-size:x-small" ng-keyup="savekeyup($event.keyCode)">Save</button>
+                                  <button id="car_cancel" type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue;border-width:thin;font-size:x-small;margin-left:15px">Cancel</button>
+                         </div>
+           
+                         <label id="lblcarlistborder"    class="lblcarlistborderclass"    ng-show="showlblcarlistborder"></label>
+                         <label id="lblplatenumber"      class="lblplatenumberclass"      ng-show="showlblplatenumber">Plate no.</label>
+                         <label id="lblmaker"            class="lblmakerclass"            ng-show="showlblmaker">Make</label>
+                         <label id="lblcarmodel"         class="lblcarmodelclass"         ng-show="showlblcarmodel">Model</label>
+
+                         <label id="lblregis"            class="lblregisclass"            ng-show="showlblregis">Registration no.</label>
+                         <label id="lblcolorheader"      class="lblcolorheaderclass"      ng-show="showcolorheader">Color</label>
+                         <label id="lblchasisheader"     class="lblchasisheaderclass"     ng-show="showlblchasisheader">Chassis no.</label>
+
+                         <label id="lblsearchbyplatenum" class="lblsearchbyplatenumclass" ng-show="showlblsearchbyplatenum">Search by Platenum :</label>
+                         <input id="txtsearchplatenum"   class="txtsearchplatenumclass"   ng-show="showtxtsearchplatenum" ng-model="searchplatenum" ng-keyup="searchplatenumkeyup($event.keyCode)" ng-mousemove="mouseenter($event)"/>
+
+                         <!--track by $index is the syntax to resolve the Error: Duplicates in the ng-repeat-->
+                         <!-- ng-blur directive is when you leave a focus from the element-->
+                         <!--<option ng-repeat="cars in carvalue | filter:searchplatenum | limitTo:4 | orderBy:cars track by $index" ng-required="required">{{cars}}</option>-->
+                         <!--<option ng-repeat="cars in carvalue | filter:searchplatenum | orderBy:cars" required="required">{{$index+1}}   {{cars}}</option> -->      
+
+                         <select ID="Listeditcar" class="Listeditcarclass" ng-model="carlist" ng-show="showcarlist" ng-keyup="listeditcarkeycode($event.keyCode)" ng-click="listeditcarkeycode2()" multiple="multiple" ng-mousemove="mouseenter($event)">                                                                                                                                              
+                                    <option ng-repeat="cars in carvalue | filter:searchplatenum | orderBy:cars track by $index">{{cars}}</option>                                                    
+                         </select>                                                                                                                                                                                                         
+
+                         <label ID="lblline2" class="lblline2class"></label>                                 
+
+                         <!--this is a transaction panel as a child div and it should put the name of the module which is myapp to make it flexible-->                          
+                         <!--<div id ="transactiondiv" class="transactionclass" ng-controller="transcontroller" ng-app="myapp">-->
+                         <div id ="transactiondiv" class="transactionclass" ng-controller="transcontroller" ng-app="myapp">
+                              
+                                  <label  id="lbltranslibrary"  class="lbltranslibraryclass"  ng-show="showlbltranslibrary">Transaction Library</label>
+                                  <label  id="lblinvoicenum"    class="lblinvoicenumclass"    ng-show="showlblinvoicenum">Invoice no.</label>
+                                  <input  id="txtinvoicenum"    class="txtinvoicenumclass"    ng-show="showinvoicenum"    ng-model="invoicenum"    ng-disabled="disabledinvoicenum"    ng-keyup="keyupinvoicenum($event.keyCode)"    ng-keypress="keypressinvoicenum($event)" maxlength="17"/>  
+                                  <label  id="lbltransactnum"   class="lbltransactnumclass"   ng-show="showlbltransactnum">Transaction no.</label>
+                                  <input  id="txttransactnum"   class="txttransactnumclass"   ng-show="showtransactnum"   ng-model="transactnum"   ng-disabled="disabledtransactnum"   ng-keyup="keyuptransactnum($event.keyCode)"   ng-keypress="keypresstransactnum($event)"/>
+                                  <label  id="lbltransactdate"  class="lbltransactdateclass"  ng-show="showlbltransactdate">Transaction date</label>
+                                  <input  id="txttransactdate"  class="txttransactdateclass"  ng-show="showtransactdate"  ng-model="transactdate"  ng-disabled="disabledtransactdate"  ng-keyup="keyuptransactdate($event.keyCode)"  ng-keypress="keypresstransactdate($event)"/>
+                                  <label  id="lblservice"       class="lblserviceclass"       ng-show="showlblservice">Service</label>                                  
+
+                                  <select id="slcservice" class="slcserviceclass" ng-show="showservice" ng-model="service" ng-disabled="disabledservice" ng-keyup="keyupservice($event.keyCode)" ng-keypress="keypressservice($event)" ng-change="changeshowservice($event)">
+                                          <option value="AIRCON CLEANING">AIRCON CLEANING</option>                                                              
+                                          <option value="CHANGE OIL - SYNTHETIC">CHANGE OIL - SYNTHETIC</option>
+                                          <option value="CHANGE OIL - SEMI SYNTHETIC">CHANGE OIL - SEMI SYNTHETIC</option>
+                                          <option value="CHANGE OIL - REGULAR GRADE">CHANGE OIL - REGULAR GRADE</option>
+                                          <option value="GEAR OIL REPLACED REGULAR">GEAR OIL REPLACED REGULAR</option>
+                                          <option value="GEAR OIL REPLACED SYNTHETIC BLEND">GEAR OIL REPLACED SYNTHETIC BLEND</option>
+                                          <option value="CVT FLUID REPLACED">CVT FLUID REPLACED</option>
+                                          <option value="COOLANT REPLACED">COOLANT REPLACED</option>
+                                          <option value="BRAKE FLUID REPLACED">BRAKE FLUID REPLACED</option>
+                                          <option value="SPARK PLUG REGULAR">SPARK PLUG REGULAR</option>
+                                          <option value="SPARK PLUG PLATINUM">SPARK PLUG PLATINUM</option>
+                                          <option value="SPARK PLUG IRIDIUM">SPARK PLUG IRIDIUM</option>
+                                          <option value="BRAKE PAD CLEANING FRONT">BRAKE PAD CLEANING FRONT</option>
+                                          <option value="BRAKE PAD CLEANING REAR">BRAKE PAD CLEANING REAR</option>
+                                          <option value="BRAKE SHOE CLEANING">BRAKE SHOE CLEANING</option>
+                                          <option value="TIRE ROTATION">TIRE ROTATION</option>
+                                          <option value="PANASONIC BATTERY">PANASONIC BATTERY</option>         
+                                          <option value="AMPLIFIER INSTALLATION">AMPLIFIER INSTALLATION</option>
+                                          <option value="SPEAKERS INSTALLATION">SPEAKERS INSTALLATION</option>
+                                          <option value="HEADUNIT SINGLE DIN">HEADUNIT SINGLE DIN</option>
+                                          <option value="HEADUNIT 2 DIN WITH GPS">HEADUNIT 2 DIN WITH GPS</option>
+                                          <option value="HEADUNIT 2 DIN WITHOUT GPS">HEADUNIT 2 DIN WITHOUT GPS</option>
+                                          <option value="HEADREST MONITOR">HEADREST MONITOR</option>
+                                          <option value="ROOF MOUNT MONITOR">ROOF MOUNT MONITOR</option>
+                                          <option value="ALARM">ALARM</option>
+                                          <option value="CENTRAL LOCK">CENTRAL LOCK</option>
+                                          <option value="PANEL REPAINT">PANEL REPAINT</>
+                                          <option value="WASH OVER">WASH OVER</option>
+                                          <option value="SCRAPE TO METAL">SCRAPE TO METAL</option>
+                                          <option value="3 STEPS DETAILING">3 STEPS DETAILING</option>
+                                          <option value="MACHINE WAX">MACHINE WAX</option>
+                                          <option value="OTHERS">OTHERS</option>
+                                  </select>
+
+                                  <label  id="lbltypeofservice" class="lbltypeofserviceclass" ng-show="showlbltypeofservice">Type of service</label>
+
+                                  <select id="slctypeofservice" class="slctypeofserviceclass" ng-show="showtypeofservice" ng-model="typeofservice" ng-disabled="disabledtypeofservice" ng-keyup="keyuptypeofservice($event.keyCode)" ng-keypress="keypresstypeofservice($event)" ng-change="changetypeofservice($event)">
+                                          <option value="Maintenance">Maintenance</option>
+                                          <option value="Warranty">Warranty</option>
+                                          <option value="Maintenance / Warranty">Maintenance / Warranty</option>
+                                  </select>
+
+                                  <label  id="lblwarstatus"     class="lblwarstatusclass"     ng-show="showlblwarstatus">Warranty status</label>
+
+                                  <select id="slcwarstatus" class="slcwarstatusclass" ng-show="showwarstatus" ng-model="warstatus" ng-disabled="disabledwarstatus" ng-keyup="keyupwarstatus($event.keyCode)" ng-keypress="keypresswarstatus($event)" ng-change="changewarstatus($event)">
+                                          <option value="Active">Active</option>
+                                          <option value="Expired">Expired</option>
+                                          <option value="None">None</option>
+                                  </select>
+
+                                  <label  id="lblwireexpire"    class="lblwireexpireclass"    ng-show="showwireexpire">Warranty expiration</label>
+                                  <input  id="txtwireexpire"    class="txtwireexpireclass"    ng-show="showwireexpire"    ng-model="wireexpire"    ng-disabled="disabledwireexpire"    ng-keyup="keyupwireexpire($event.keyCode)"    ng-keypress="keypresswireexpire($event)" type="date"/>
+                                  <label  id="lblmainsched"     class="lblmainschedclass"     ng-show="showlblmainsched">Maintenance schedule</label>
+
+                                  <select id="slcmainsched" class="slcmainschedclass" ng-show="showmainsched" ng-model="mainsched" ng-disabled="disabledmainsched" ng-keyup="keyupmainsched($event.keyCode)" ng-keypress="keypressmainsched($vent)" ng-change="mschedvalue($event)">
+                                          <option value="1 week">1 week</option>
+                                          <option Value="2 weeks">2 weeks</option>
+                                          <option Value="3 weeks">3 weeks</option>
+                                          <option Value="4 weeks">4 weeks</option>
+                                          <option Value="1 month">1 month</option>
+                                          <option Value="2 months">2 months</option>           
+                                          <option Value="3 months">3 months</option> 
+                                          <option Value="4 months">4 months</option>
+                                          <option Value="5 months">5 months</option>
+                                          <option Value="6 months">6 months</option>
+                                          <option Value="7 months">7 months</option>
+                                          <option Value="8 months">8 months</option>
+                                          <option Value="9 months">9 months</option>
+                                          <option Value="10 months">10 months</option>
+                                          <option Value="11 months">11 months</option>
+                                          <option Value="1 year">1 year</option>
+                                  </select>
+
+                                  <label    id="lblmaindue"       class="lblmaindueclass"       ng-show="showlblmaindue">Maintenance due date</label>
+                                  <input    id="txtmaindue"       class="txtmaindueclass"       ng-show="showmaindue"       ng-model="maindue"       ng-disabled="disabledmaindue"       ng-keyup="keyupmaindue($event.keyCode)"      ng-keypress="keypressmaindue($event)" type="date"/>
+                                  <label    id="lblsmsmess"       class="lblsmsmessclass"       ng-show="showlblsmsmess">SMS message</label>                                  
+                                  <textarea id="txtsmsmess"       class="txtsmsmessclass"       ng-show="showsmsmess"       ng-model="smsmess"       ng-disabled="disabledsmsmess"       ng-keyup="keyupsmsmess($event.keyCode)"      ng-keypress="keypresssmsmess($event)" TextMode="Multiline"></textarea>
+                                  <label    id="lblservdetails"   class="lblservdetailsclass"   ng-show="showlblservdetails">Service details</label>
+                                  <textarea id="txtservdetails"   class="txtservdetailsclass"   ng-show="showservdetails"   ng-model="servdetails"   ng-disabled="disabledservdetails"   ng-keyup="keyupservdetails($event.keyCode)"  ng-keypress="keypressservdetails($event)" TextMode="Multiline"></textarea>                                  
+
+                                  <label    id="lbltransborder"   class="lbltransborderclass"   ng-show="showtransborder"   ng-model="transborder"   ng-disabled="disbaledtransborder"   ng-keyup="keyuptransborder($event.keycode)"></label>
+                                  <label    id="lbltrandate"      class="lbltrandateclass"      ng-show="showtrandate">Transaction date</label>
+                                  <label    id="lbltrantnum"      class="lbltrantnumclass"      ng-show="showtrantnum">Transaction number</label>
+                                  <label    id="lblinvcnum"       class="lblinvcnumclass"       ng-show="showinvcnum">Invoice no.</label>
+                                  <label    id="lblserv"          class="lblservclass"          ng-show="showserv">Service</label>
+                                  <label    id="lblservetype"     class="lblservetypeclass"     ng-show="showservetype">Service type</label>   
+                                  <label    id="lblwarstat"       class="lblwarstatclass"       ng-show="showwarstat">Warranty status</label>
+                                  <label    id="lblmainschedule"  class="lblmainscheduleclass"  ng-show="showmainschedule">Maintenance schedule</label>
+                                  <label    id="lblmainduedate"   class="lblmainduedateclass"   ng-show="showmainduedate">Maintenance due date</label>
+                                  <select   id="translistedit"    class="translisteditclass"    ng-show="showtranslist"     ng-model="tranlist"      ng-disabled="disabledtranslist"     ng-keyup="keyuptranslist($event.keyCode)" multiple="multiple">
+                                            <option ng-repeat="trn in trnvalue | filter:seacrhtrans | orderBy:trn track by $index">{{trn}}</option>
+                                  </select>                                     
+
+                                  <button id="btnaddtransaction"  class="btnaddtransactionclass"  ng-click="clickaddtransaction($event)">Add transaction</button>                     
+                                  <button id="btnedittransaction" class="btnedittransactionclass" ng-click="clickedittransaction($event)" ng-keyup="edittranskeyup($event.keyCode)">Edit</button>
+                                  <button id="btndeltransaction"  class="btndeltransactionclass"  ng-click="clickdeltransaction($event)">delete</button>                                                                                                                             
+
+                                  <div id="transdivconfirm" class="transdivconfirmclass" ng-show="showtransdivconfirm" ng-keyup="keyuptransdivconfirm($event.keyCode)">
+                                          <button id="btnsavetransaction"   type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue;border-width:thin;font-size:x-small" ng-click="clicksavetransaction"                    ng-keyup="keyupsavetransaction($event.keyCode)">Save</button>
+                                          <button id="btncanceltransaction" type="button" style="width:80px;background-color:lightgray;height:16px;border-color:blue;border-width:thin;font-size:x-small;margin-left:15px" ng-click="clickcanceltransaction" ng-keyup="keyupcanceltransaction($event.keyCode)">Cancel</button>
+                                  </div>                                  
+                         </div>
+                         <!--this is a transaction panel as a child div and it should put the name of the module which is myapp to make it flexible-->                                                                               
+                </div>
+                 <!--//// this is for car panel  sub-div ////-->                                                                                                                                                                                                                                                                                                                  
+                         <script src="js/customer_keypressr.js"></script>
+                         <script src="js/car_keypress.js"></script>
+                         <script src="js/transaction_keypress.js"></script>
+                         <!--<script src="js/confirmation.js"></script>-->  
+                         <!--<script src="js/factoryservices.js"></script>-->
+
+       </div>
+       <!--//// this is for customer panel main div ////-->
+   </body>
+</html>
+
+
+                                                                                                                                                                                                  

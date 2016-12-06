@@ -1,0 +1,360 @@
+﻿
+/*car library css*/
+.lblcarlibclass{
+    position:absolute;
+    top:259px;
+    left:12px;
+    width:131px;
+    font-weight:bold;
+    color:blue;
+    font-size:medium;
+    border-style:none;
+    font-family:Times New Roman;
+    display:inline;
+}
+
+.lblplatenumclass{
+    position:absolute;
+    top:296px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Time New Roman;
+    display:inline;
+}
+
+.txtplatenumclass{
+    position:absolute;
+    top:296px;
+    left:159px;
+    width:172px;
+    font-size:12px;
+    font-family:Time New Roman;
+    display:inline;    
+}  
+
+.lblmakeclass{
+    position:absolute;
+    top:326px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inline;
+}
+
+.txtmakeclass{
+    position:absolute;
+    top:326px;
+    left:159px;
+    width:248px;
+    font-size:12px;
+    font-family:Times New Roman;
+    display:inline;
+}
+
+.lblmodelclass{
+    position:absolute;
+    top:356px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inline;
+}
+
+.txtmodelclass{
+    position:absolute;
+    top:356px;
+    left:159px;
+    width:248px;
+    font-size:12px;
+    font-family:Times New Roman;
+    display:inline;
+}
+
+.lblregisnumclass{
+    position:absolute;
+    top: 296px;
+    left: 455px;
+    width: 100px;
+    height: 19px;
+    font-size:15px;
+    display:inline;
+}
+
+.txtregisnumclass{
+    position:absolute;
+    top:296px;
+    left:587px;
+    width:172px;
+    height:19px;
+    font-size:12px;
+    display:inline;
+    font-family:Times New Roman;
+}
+
+.lblregisdateclass{
+    position:absolute;
+    top:326px;
+    left:455px;
+    width:150px;
+    height:19px;
+    font-size:15px;
+    display:inline;
+}
+
+.txtregisdateclass{
+    position:absolute;
+    top:326px;
+    left:587px;
+    width:172px;
+    height:19px;
+    font-size:12px;
+    display:inline;
+    font-family:Times New Roman;
+}
+
+.lblcolorclass{
+    position:absolute;
+    top:356px;
+    left:455px;
+    width:150px;
+    height:19px;
+    font-size:15px;
+    display:inline;
+}
+
+.txtcolorclass{
+    position:absolute;
+    top:356px;
+    left:587px;
+    width:172px;
+    height:19px;
+    font-size:12px;
+    display:inline;
+    font-family:Times New Roman;
+}
+
+.lblchasisnumclass{
+    position:absolute;
+    top:296px;
+    left:888px;
+    width:172px;
+    height:19px;
+    font-size:15px;
+    display:inline;
+}
+
+.txtchasisnumclass{
+    position:absolute;
+    top:296px;
+    left:998px;
+    width:172px;
+    height:19px;
+    font-size:12px;
+    display:inline;
+    font-family:Times New Roman;
+}
+  
+.lblenginenumclass{
+    position:absolute;
+    top:326px;
+    left:888px;
+    height:19px;
+    font-size:15px;
+    display:inline;
+}
+
+.txtenginenumclass{
+    position: absolute;
+    top:326px;
+    left:998px;
+    width:172px;
+    height:19px;
+    font-size:12px;
+    display:inline;
+    font-family:Times New Roman;
+}
+
+.btnaddcarclass{    
+    position:absolute;
+    margin-right: 39px;
+    left: 29px;
+    top: 389px;
+    height: 19px;
+    width:110px;     
+    line-height: 5px;
+    font-size:11px;
+    font-family:Times New Roman;   
+}
+
+.btneditcarclass{
+    position:absolute;
+    margin-right:39px;
+    left:138px;
+    top:389px;
+    height:19px;
+    width:110px;
+    line-height:5px;
+    font-size:11px;
+    font-family:Times New Roman;
+}
+
+.btndeletecarclass{
+    position:absolute;
+    margin-right:39px;
+    left:247px;
+    top:389px;
+    height:19px;
+    width:110px;
+    line-height:5px;
+    font-size:11px;
+    font-family:Times New Roman;
+}
+
+.btnviewcarclass{
+    position:absolute;
+    margin-right:39px;
+    left:356px;
+    top:389px;
+    height:19px;
+    width:110px;
+    line-height:5px;
+    font-size:11px;
+    font-family:Times New Roman;
+}
+
+.btnaddtransactclass{
+    position:absolute;
+    margin-right:39px;
+    left:587px;
+    top:389px;
+    height:19px;
+    width:177px;
+    line-height:5px;
+    font-size:11px;
+    font-family:Times New Roman;
+}
+
+.cardivconfirmclass{
+    position:absolute;
+    left: 996px;
+    top: 390px;           
+    width:500px;
+    display:none;
+}
+
+.lblcarlistborderclass{
+    position:absolute;
+    top: 248px;
+    left: 153px;
+    height: 20px;
+    width: 750px;
+    color: rgb(51, 105, 30);
+    border-color:#9E9E9E;
+    border-style:solid;
+    border-width:2px;
+    display:none;   
+}
+
+.lblplatenumberclass{
+    position:absolute;
+    top:256px;
+    left:155px;
+    height:17px;
+    display:none;
+    font-size:14px;
+}
+
+.lblmakerclass{
+    position:absolute;
+    top:256px;
+    left:241px;
+    height:17px;
+    display:none;
+    font-size:14px;
+}
+
+.lblcarmodelclass{
+    position:absolute;
+    top:256px;
+    left:430px;
+    height:17px;
+    display:none;
+    font-size:14px;
+}
+
+.lblregisclass{
+   position:absolute;
+   top:256px;
+   left:618px;
+   height:17px;   
+   font-size:14px;
+   display:none;
+}
+
+.lblcolorheaderclass{
+   position:absolute;
+   top:256px;
+   left:760px;
+   height:17px;   
+   font-size:14px;
+   display:none;
+}
+
+.lblchasisheaderclass{
+   position:absolute;
+   top:256px;
+   left:900px;
+   height:17px;   
+   font-size:14px;
+   display:none;
+}
+
+.lblsearchbyplatenumclass{
+    position:absolute;
+    top:256px;
+    left:780px;
+    height:17px;
+    display:none;
+    font-size:14px;
+}                           
+
+.txtsearchplatenumclass{
+    position:absolute;
+    top:248px;
+    left:905px;
+    height:16px;    
+    font-size:12px;
+    width:171px;
+    display:none;
+    font-family:Times New Roman;
+}
+
+.Listeditcarclass{
+    position:absolute;
+    left:   153px;
+    top:    271px;
+    width:  927px;
+    height: 120px;
+    font-family : Courier New, Courier, monospace; font-size:11.5px;
+    background-color:#fcffe0;
+    color: rgb(51, 105, 30);
+    border-width:3px;
+    display:none;
+}
+
+.lblline2class {
+    position:absolute;
+    left: 0px;
+    top: 415px;
+    width: 1338px;
+    height: 5px;
+    background-color:blue;           
+    border-style:solid;
+    border-width:1px;
+}
+
+/*car library css*/                                
+

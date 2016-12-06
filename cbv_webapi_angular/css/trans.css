@@ -1,0 +1,387 @@
+﻿
+.lbltranslibraryclass{
+    position:absolute;
+    top:433px;
+    left:12px;
+    width:171px;
+    font-weight:bold;
+    color:blue;
+    font-size:medium;
+    border-style:none;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblinvoicenumclass{
+    position:absolute;
+    top:457px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+ 
+.txtinvoicenumclass{
+    position:absolute;
+    top:455px;
+    left:159px;
+    width:172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lbltransactnumclass{
+    position:absolute;
+    top:482px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txttransactnumclass{
+    position:absolute;
+    top:482px;
+    left:159px;
+    width:172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lbltransactdateclass{
+    position:absolute;
+    top:512px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txttransactdateclass{
+    position:absolute;
+    top:512px;
+    left:159px;
+    width:172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblserviceclass{
+    position:absolute;
+    top:542px;
+    left:18px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.slcserviceclass{
+    position:absolute;
+    top:542px;
+    left:159px;
+    width:248px;
+    font-size:X-small;
+    height:22px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lbltypeofserviceclass{
+    position:absolute;
+    top:457px;
+    left:455px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.slctypeofserviceclass{
+    position:absolute;
+    top:455px;
+    left:587px;
+    width:248px;
+    font-size:15px;
+    height:22px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblwarstatusclass{
+    position:absolute;
+    top:485px;
+    left:455px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.slcwarstatusclass{
+    position:absolute;
+    top:485px;
+    left:587px;
+    width:248px;
+    font-size:15px;
+    height:22px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblwireexpireclass{
+    position:absolute;
+    top:512px;
+    left:455px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txtwireexpireclass{
+    position:absolute;
+    top:515px;
+    left:587px;
+    width:172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblmainschedclass{
+    position:absolute;
+    top:538px;
+    left:455px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.slcmainschedclass{
+    position:absolute;
+    top:545px;
+    left:587px;
+    width:248px;
+    font-size:15px;
+    height:20px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblmaindueclass{
+    position:absolute;
+    top:447px;
+    left:888px;
+    width:100px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txtmaindueclass{
+    position:absolute;
+    top:455px;
+    left:998px;
+    width:172px;
+    font-size:15px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.lblsmsmessclass{
+    position:absolute;
+    top:488px;
+    left:888px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txtsmsmessclass{
+    position:absolute;
+    top:483px;
+    left:998px;
+    width:330px;
+    height:40px;
+    font-size:12.5px;
+    font-family:Times New Roman;color:blue;
+    display:inherit;
+}
+
+.lblservdetailsclass{
+    position:absolute;
+    top:530px;
+    left:888px;
+    width:131px;
+    font-size:medium;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.txtservdetailsclass{
+    position:absolute;
+    top:530px;
+    left:998px;
+    width:330px;
+    height:40px;
+    font-size:13px;
+    font-family:Times New Roman;
+    display:inherit;
+}
+
+.btnaddtransactionclass{
+   position:absolute;
+   margin-right:39px;
+   left:29px;
+   top:580px;
+   height:19px;
+   width:110px;
+   line-height:5px;
+   font-size:11px;
+   font-family:Times New Roman;
+}
+
+.btnedittransactionclass{
+   position:absolute;
+   margin-right:39px;
+   left:138px;
+   top:580px;
+   height:19px;
+   width:110px;
+   line-height:5px;
+   font-size:11px;
+   font-family:Times New Roman;
+}
+
+.btndeltransactionclass{
+   position:absolute;
+   margin-right:39px;
+   left:247px;
+   top:580px;
+   height:19px;
+   width:110px;
+   line-height:5px;
+   font-size:11px;
+   font-family:Times New Roman;   
+}
+ 
+.transdivconfirmclass{
+   position:absolute;  
+   left:996px;
+   top:580px;  
+   width:300px;
+   display:none;
+}   
+
+.translisteditclass{
+   position:absolute;
+   left:   153px;
+   top:    443px;       
+   width:  1182px;
+   height: 137px;
+   font-family:Courier New, Courier, monospace; font-size:10.5px;
+   background-color:#fcffe0;  
+   color:rgb(51, 105, 30);
+   border-width:3px;
+   display:none;
+}
+
+.lbltransborderclass{  
+   position:absolute;
+   top: 423px;
+   left: 153px;
+   height: 16px;
+   width: 1178px;
+   color: rgb(51, 105, 30);
+   border-color:#9E9E9E;
+   border-style:solid;
+   border-width:2px;
+   display:none;   
+}
+
+.lbltrandateclass{
+   position:absolute;
+   top:426px;
+   left:155px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lbltrantnumclass{
+   position:absolute;
+   top:426px;
+   left:260px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblinvcnumclass{
+   position:absolute;
+   top:426px;
+   left:404px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblservclass{
+   position:absolute;
+   top:426px;
+   left:545px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblservetypeclass{
+   position:absolute;
+   top:426px;
+   left:824px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblwarstatclass{
+   position:absolute;
+   top:426px;
+   left:958px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblmainscheduleclass{
+   position:absolute;
+   top:426px;
+   left:1060px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+.lblmainduedateclass{
+   position:absolute;
+   top:426px;
+   left:1195px;
+   height:17px;
+   font-size:14px;
+   display:none;
+}
+
+  
+
+
+
+    
